@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 367854023}
   - component: {fileID: 367854024}
   - component: {fileID: 367854025}
+  - component: {fileID: 367854027}
   - component: {fileID: 367854026}
   m_Layer: 0
   m_Name: Player
@@ -303,6 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputScript
   _playerManager: {fileID: 367854025}
   _playerObject: {fileID: 1629986796}
+  _playerStateMachine: {fileID: 367854027}
   _inputMove: {x: 0, y: 0}
 --- !u!114 &367854025
 MonoBehaviour:
@@ -343,6 +345,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.72, z: 0}
+--- !u!114 &367854027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367854020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c54540067838ce44a4fa8619673c001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
 --- !u!4 &487355543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}

@@ -15,12 +15,13 @@ public class PlayerStateMachine : MonoBehaviour
         //ステートのインスタンス化
         states = new Dictionary<System.Type, IPlayerState>()
         {
-            {typeof(PlayerIdleState), new PlayerIdleState(this) },
-            {typeof(PlayerMoveState), new PlayerMoveState(this) },
+            {typeof(PlayerIdleState),   new PlayerIdleState(this) },
+            {typeof(PlayerMoveState),   new PlayerMoveState(this) },
+            {typeof(PlayerAttackState), new PlayerAttackState(this) },
         };
 
         //初期ステートの設定
-        SwicthState(typeof(PlayerStateMachine));
+        SwicthState(typeof(PlayerIdleState));
     }
 
     // Update is called once per frame
