@@ -9,6 +9,12 @@ public class PlayerInputScript: MonoBehaviour
     //ステートマシンスクリプト
     [SerializeField] private PlayerStateMachine _playerStateMachine;
     public Vector2 _inputMove = Vector2.zero;
+
+    private void Awake()
+    {
+        
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
