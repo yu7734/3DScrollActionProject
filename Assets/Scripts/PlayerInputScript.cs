@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 public class PlayerInputScript: MonoBehaviour
 {
     private InputSystem_Actions inputActions;
-    [SerializeField] private PlayerManager _playerManager;
-    [SerializeField] private PlayerObject _playerObject;
     //ステートマシンスクリプト
     [SerializeField] private PlayerStateMachine _playerStateMachine;
     public Vector2 _inputMove = Vector2.zero;
