@@ -11,7 +11,6 @@ public class PlayerStateMachine : MonoBehaviour
     Dictionary<System.Type, IPlayerState> states;
 
     //オブジェクト、クラスを参照
-    Rigidbody rb;
     private Animator animator;
     public CharacterController characterController;
     [SerializeField] public PlayerInputScript _playerInput;
