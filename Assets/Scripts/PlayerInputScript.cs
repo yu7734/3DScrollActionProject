@@ -6,7 +6,15 @@ public class PlayerInputScript: MonoBehaviour
     private InputSystem_Actions inputActions;
     [SerializeField] private PlayerManager _playerManager;
     [SerializeField] private PlayerObject _playerObject;
+    //ステートマシンスクリプト
+    [SerializeField] private PlayerStateMachine _playerStateMachine;
     public Vector2 _inputMove = Vector2.zero;
+
+    private void Awake()
+    {
+        
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,6 +47,7 @@ public class PlayerInputScript: MonoBehaviour
         inputActions?.Disable();
     }
 
+    //移動イベント
     private void OnMove(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -58,6 +67,7 @@ public class PlayerInputScript: MonoBehaviour
         }
     }
 
+    //攻撃イベント
     private void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started)
@@ -67,12 +77,12 @@ public class PlayerInputScript: MonoBehaviour
 
         if (context.performed)
         {
-            _playerObject.CAnima("Attack", true);
+            _playerStateMachine.SwicthState(typeof(PlayerAttackState));
         }
 
         if (context.canceled)
         {
-            _playerObject.CAnima("Attack", false);
+            _playerStateMachine.SwicthState(typeof(PlayerIdleState));
         }
     }
 }
