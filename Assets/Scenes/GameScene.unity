@@ -128,10 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367854021}
-  - component: {fileID: 367854022}
   - component: {fileID: 367854023}
   - component: {fileID: 367854024}
-  - component: {fileID: 367854025}
   - component: {fileID: 367854027}
   - component: {fileID: 367854026}
   m_Layer: 0
@@ -157,33 +155,6 @@ Transform:
   - {fileID: 487355543}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!54 &367854022
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367854020}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &367854023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,24 +273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3599df5d6031d4192d1d291467bc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputScript
-  _playerManager: {fileID: 367854025}
-  _playerObject: {fileID: 1629986796}
+  _playerManager: {fileID: 0}
+  _playerObject: {fileID: 0}
   _playerStateMachine: {fileID: 367854027}
   _inputMove: {x: 0, y: 0}
---- !u!114 &367854025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367854020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f8bd60ada27bf40995e7aa80d36c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
-  _playerInput: {fileID: 367854024}
-  playerMoveSpeed: 3
 --- !u!143 &367854026
 CharacterController:
   m_ObjectHideFlags: 0
@@ -357,8 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c54540067838ce44a4fa8619673c001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  characterController: {fileID: 0}
   _playerInput: {fileID: 367854024}
-  playerMoveSpeed: 0
+  playerMoveSpeed: 3
 --- !u!4 &487355543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
@@ -562,9 +520,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7647134206250791342, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1629986796}
-    - targetCorrespondingSourceObject: {fileID: 7647134206250791342, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1629986794}
   m_SourcePrefab: {fileID: 100100000, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
@@ -723,18 +678,6 @@ CapsuleCollider:
   m_Height: 1.46
   m_Direction: 1
   m_Center: {x: 0, y: 0.72, z: 0}
---- !u!114 &1629986796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629986792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86d6d04ea624ae64e9c30008484d67a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerObject
 --- !u!1 &1750306133
 GameObject:
   m_ObjectHideFlags: 0

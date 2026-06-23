@@ -50,33 +50,36 @@ public class PlayerInputScript: MonoBehaviour
     //移動イベント
     private void OnMove(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
-            _playerObject.CAnima("Walk", true);
-        }
+        //if (context.started)
+        //{
+            
+        //}
 
         if (context.performed)
         {
+            //移動ステートに入る
             _inputMove = context.ReadValue<Vector2>();
+            _playerStateMachine.SwicthState(typeof(PlayerMoveState));
         }
 
         if (context.canceled)
         {
-            _inputMove = Vector2.zero;
-            _playerObject.CAnima("Walk", false);
+            //移動ステートを抜け、待機ステートに入る
+            _playerStateMachine.SwicthState(typeof(PlayerIdleState));
         }
     }
 
     //攻撃イベント
     private void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
-        {
+        //if (context.started)
+        //{
 
-        }
+        //}
 
         if (context.performed)
         {
+            //攻撃ステートに入る
             _playerStateMachine.SwicthState(typeof(PlayerAttackState));
         }
 
