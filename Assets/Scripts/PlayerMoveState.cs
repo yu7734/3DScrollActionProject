@@ -25,5 +25,7 @@ public class PlayerMoveState : PlayerStateBase
         //“ü—Í‚É‰ž‚¶‚ÄˆÚ“®
         var moveVelocity = new Vector3(stateMachine._playerInput._inputMove.x * stateMachine.playerMoveSpeed * Time.deltaTime, 0, 0);
         stateMachine.characterController.Move(moveVelocity);
+
+        //if (stateMachine._playerInput._inputMove.x < 0) 
     }
 }

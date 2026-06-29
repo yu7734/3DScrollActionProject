@@ -57,6 +57,7 @@ public class PlayerStateMachine : MonoBehaviour
         }
         else
         {
+            //ステートが見つからなかったらエラー
             Debug.LogError($"State not found: {newStateType}");
         }
     }

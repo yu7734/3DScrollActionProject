@@ -5,12 +5,12 @@ public class PlayerInputScript: MonoBehaviour
 {
     private InputSystem_Actions inputActions;
     //ステートマシンスクリプト
-    [SerializeField] private PlayerStateMachine _playerStateMachine;
+    private PlayerStateMachine _playerStateMachine;
     public Vector2 _inputMove = Vector2.zero;
 
     private void Awake()
     {
-        
+        _playerStateMachine = GetComponent<PlayerStateMachine>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
