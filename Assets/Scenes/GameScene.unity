@@ -273,7 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3599df5d6031d4192d1d291467bc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputScript
-  _playerStateMachine: {fileID: 367854027}
   _inputMove: {x: 0, y: 0}
 --- !u!143 &367854026
 CharacterController:
@@ -313,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   characterController: {fileID: 0}
+  _playerObject: {fileID: 1019067715}
   _playerInput: {fileID: 367854024}
   playerMoveSpeed: 3
 --- !u!4 &487355543 stripped
@@ -518,6 +518,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
+--- !u!1 &1019067715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7647134206250791342, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
+  m_PrefabInstance: {fileID: 934552233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1446229729
 GameObject:
   m_ObjectHideFlags: 0

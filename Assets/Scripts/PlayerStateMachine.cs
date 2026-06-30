@@ -13,11 +13,13 @@ public class PlayerStateMachine : MonoBehaviour
     //オブジェクト、クラスを参照
     private Animator animator;
     public CharacterController characterController;
+    public GameObject _playerObject;
     [SerializeField] public PlayerInputScript _playerInput;
     [SerializeField] public float playerMoveSpeed;
 
     private void Awake()
     {
+        //_playerObject = GetComponentInChildren<GameObject>();
         //ステートのインスタンス化
         states = new Dictionary<System.Type, IPlayerState>()
         {
