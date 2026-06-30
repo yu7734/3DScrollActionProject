@@ -29,6 +29,9 @@ public class PlayerInputScript: MonoBehaviour
         inputActions.Player.Attack.performed += OnAttack;
         inputActions.Player.Attack.canceled += OnAttack;
 
+        //ジャンプイベントの登録
+        inputActions.Player.Jump.started += OnJump;
+
         //InputSystemの有効化
         inputActions.Enable();
     }
@@ -84,6 +87,20 @@ public class PlayerInputScript: MonoBehaviour
         if (context.canceled)
         {
             _playerStateMachine.SwicthState(typeof(PlayerIdleState));
+        }
+    }
+
+    //ジャンプイベント
+    private void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            _playerStateMachine.SwicthState(typeof(PlayerJumpState));
+        }
+
+        if (context.canceled)
+        {
+
         }
     }
 }

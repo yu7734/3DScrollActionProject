@@ -12,10 +12,13 @@ public class PlayerStateMachine : MonoBehaviour
 
     //オブジェクト、クラスを参照
     private Animator animator;
+    public Vector3 playerDirection = Vector3.zero;
     public CharacterController characterController;
     public GameObject _playerObject;
-    [SerializeField] public PlayerInputScript _playerInput;
-    [SerializeField] public float playerMoveSpeed;
+    public PlayerInputScript _playerInput;
+    public float playerMoveSpeed;
+    public float playerJumpPower;
+    public float gravity = 20.0f;
 
     private void Awake()
     {
@@ -26,6 +29,7 @@ public class PlayerStateMachine : MonoBehaviour
             {typeof(PlayerIdleState),   new PlayerIdleState(this) },
             {typeof(PlayerMoveState),   new PlayerMoveState(this) },
             {typeof(PlayerAttackState), new PlayerAttackState(this) },
+            {typeof(PlayerJumpState),   new PlayerJumpState(this)  },
         };
 
         //初期ステートの設定

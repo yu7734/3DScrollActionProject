@@ -311,10 +311,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c54540067838ce44a4fa8619673c001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+  playerDirection: {x: 0, y: 0, z: 0}
   characterController: {fileID: 0}
   _playerObject: {fileID: 1019067715}
   _playerInput: {fileID: 367854024}
   playerMoveSpeed: 3
+  playerJumpPower: 2
+  gravity: 20
 --- !u!4 &487355543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
