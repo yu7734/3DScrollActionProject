@@ -11,14 +11,15 @@ public class PlayerStateMachine : MonoBehaviour
     Dictionary<System.Type, IPlayerState> states;
 
     //オブジェクト、クラスを参照
-    Rigidbody rb;
     private Animator animator;
-    private CharacterController characterController;
-    [SerializeField] private PlayerInputScript _playerInput;
-    [SerializeField] private float playerMoveSpeed;
+    public CharacterController characterController;
+    public GameObject _playerObject;
+    [SerializeField] public PlayerInputScript _playerInput;
+    [SerializeField] public float playerMoveSpeed;
 
     private void Awake()
     {
+        //_playerObject = GetComponentInChildren<GameObject>();
         //ステートのインスタンス化
         states = new Dictionary<System.Type, IPlayerState>()
         {
@@ -30,6 +31,7 @@ public class PlayerStateMachine : MonoBehaviour
         //初期ステートの設定
         SwicthState(typeof(PlayerIdleState));
 
+        characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
     }
 
@@ -57,6 +59,7 @@ public class PlayerStateMachine : MonoBehaviour
         }
         else
         {
+            //ステートが見つからなかったらエラー
             Debug.LogError($"State not found: {newStateType}");
         }
     }
