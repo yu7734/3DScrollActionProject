@@ -16,7 +16,11 @@ public class PlayerIdleState : PlayerStateBase
 
     public override void Update()
     {
-        
+        if (stateMachine.characterController.isGrounded)
+            return;
+
+        stateMachine.playerDirection.y -= stateMachine.gravity * Time.deltaTime;
+        stateMachine.characterController.Move(stateMachine.playerDirection * Time.deltaTime);
     }
 
     public override void Exit()

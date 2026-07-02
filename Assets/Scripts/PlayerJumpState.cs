@@ -13,11 +13,14 @@ public class PlayerJumpState : PlayerStateBase
     {
         stateMachine.playerDirection.y -= stateMachine.gravity * Time.deltaTime;
         stateMachine.characterController.Move(stateMachine.playerDirection * Time.deltaTime);
+
+        if (stateMachine.characterController.isGrounded)
+            stateMachine.SwicthState(typeof(PlayerIdleState));
     }
 
     public override void Exit()
     {
-        
+
     }
 
     private void Jump()
