@@ -316,7 +316,7 @@ MonoBehaviour:
   _playerObject: {fileID: 1019067715}
   _playerInput: {fileID: 367854024}
   playerMoveSpeed: 3
-  playerJumpPower: 2
+  playerJumpPower: 10
   gravity: 20
 --- !u!4 &487355543 stripped
 Transform:

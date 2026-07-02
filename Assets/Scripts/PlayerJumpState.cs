@@ -11,7 +11,8 @@ public class PlayerJumpState : PlayerStateBase
 
     public override void Update()
     {
-        
+        stateMachine.playerDirection.y -= stateMachine.gravity * Time.deltaTime;
+        stateMachine.characterController.Move(stateMachine.playerDirection * Time.deltaTime);
     }
 
     public override void Exit()
@@ -22,6 +23,6 @@ public class PlayerJumpState : PlayerStateBase
     private void Jump()
     {
         stateMachine.playerDirection.y = stateMachine.playerJumpPower;
-        stateMachine.characterController.Move(stateMachine.playerDirection);
+        //stateMachine.characterController.Move(stateMachine.playerDirection);
     }
 }

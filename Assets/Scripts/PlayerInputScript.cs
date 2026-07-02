@@ -39,7 +39,7 @@ public class PlayerInputScript: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //生成したインスタンスの解放
@@ -65,6 +65,7 @@ public class PlayerInputScript: MonoBehaviour
 
         if (context.canceled)
         {
+            _playerStateMachine.playerDirection = Vector3.zero;
             //移動ステートを抜け、待機ステートに入る
             _playerStateMachine.SwicthState(typeof(PlayerIdleState));
         }

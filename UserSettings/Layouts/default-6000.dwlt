@@ -152,7 +152,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 71
+  controlID: 27
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 28
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -814,11 +814,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -4808
-      - m_Data: -3210
       - m_Data: -1300
-      - m_Data: 45636
-      - m_Data: 46774
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -956,17 +952,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\G2503\Documents\UnityProject\3DScrollActionProject\3DScrollActionProject
+  m_LastProjectPath: C:\Users\Ike2yu\Documents\GitHub\3DScrollActionProject
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 46580
+    - m_Data: 46574
     m_LastClickedID:
-      m_Data: 46580
-    m_ExpandedIDs: []
+      m_Data: 46574
+    m_ExpandedIDs:
+    - m_Data: 0
+    - m_Data: 46248
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -997,7 +995,9 @@ MonoBehaviour:
     m_SelectedIDs: []
     m_LastClickedID:
       m_Data: 0
-    m_ExpandedIDs: []
+    m_ExpandedIDs:
+    - m_Data: 0
+    - m_Data: 46248
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1025,8 +1025,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 46774
-    m_LastClickedInstanceID: 46774
+    - m_Data: 32340
+    m_LastClickedInstanceID: 32340
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
@@ -1129,7 +1129,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1798,9 +1798,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.40245348, y: 0.78147995, z: -0.02226445}
+    m_Target: {x: 2.6618023, y: 13.781396, z: -0.63128036}
     speed: 2
-    m_Value: {x: 0.40245348, y: 0.78147995, z: -0.02226445}
+    m_Value: {x: 2.6618023, y: 13.781396, z: -0.63128036}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1846,13 +1846,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+    m_Target: {x: 0.3341983, y: -0.62770987, z: 0.34129146, w: 0.6146644}
     speed: 2
-    m_Value: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+    m_Value: {x: -0.3341983, y: 0.62770987, z: -0.34129146, w: -0.6146644}
   m_Size:
-    m_Target: 0.94116664
+    m_Target: 2.55082
     speed: 2
-    m_Value: 0.94116664
+    m_Value: 2.55082
   m_Ortho:
     m_Target: 0
     speed: 2
