@@ -60,12 +60,13 @@ public class PlayerInputScript: MonoBehaviour
         {
             //移動ステートに入る
             _inputMove = context.ReadValue<Vector2>();
-            //if (_playerStateMachine.characterController.isGrounded)
+            if (_playerStateMachine.characterController.isGrounded)
                 _playerStateMachine.SwicthState(typeof(PlayerMoveState));
         }
 
         if (context.canceled)
         {
+            _inputMove = Vector2.zero;
             //移動ステートを抜け、待機ステートに入る
             _playerStateMachine.SwicthState(typeof(PlayerIdleState));
         }

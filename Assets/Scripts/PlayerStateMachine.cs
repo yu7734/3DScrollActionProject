@@ -74,4 +74,18 @@ public class PlayerStateMachine : MonoBehaviour
     {
         animator.SetBool(animaName, bAnima);
     }
+
+    public void PlayerMove()
+    {
+        //“ü—Í‚É‰ž‚¶‚ÄˆÚ“®
+        var moveVelocity = new Vector3(_playerInput._inputMove.x * playerMoveSpeed, playerDirection.y, 0);
+
+        //“ü—Í‚É‰ž‚¶‚ÄŒü‚«‚ð•Ï‚¦‚é
+        if (_playerInput._inputMove.x < 0)
+            _playerObject.transform.eulerAngles = new Vector3(0, -90, 0);
+        else if (_playerInput._inputMove.x > 0)
+            _playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
+
+        characterController.Move(moveVelocity * Time.deltaTime);
+    }
 }
