@@ -13,6 +13,7 @@ public class PlayerAttackState : PlayerStateBase
 
     public override void Update()
     {
+        //攻撃アニメーション再生
         stateMachine.CAnima("Attack", true);
     }
 

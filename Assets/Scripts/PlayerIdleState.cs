@@ -16,11 +16,10 @@ public class PlayerIdleState : PlayerStateBase
 
     public override void Update()
     {
-        if (stateMachine.characterController.isGrounded)
-            return;
+        if (stateMachine.characterController.isGrounded) return;
 
-        stateMachine.playerDirection.y -= stateMachine.gravity * Time.deltaTime;
-        stateMachine.characterController.Move(stateMachine.playerDirection * Time.deltaTime);
+        //地面に着いていなかったら落下ステートに遷移
+        stateMachine.SwicthState(typeof(PlayerFallState));
     }
 
     public override void Exit()
