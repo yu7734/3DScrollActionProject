@@ -14,6 +14,10 @@ public class PlayerMoveState : PlayerStateBase
     public override void Update()
     {
         stateMachine.PlayerMove();
+
+        //地面についていなかったら落下ステートに切り替え
+        if (!stateMachine.characterController.isGrounded)
+            stateMachine.SwicthState(typeof(PlayerFallState));
     }
 
     public override void Exit()
