@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\PlayerStateBase.cs" />
     <Compile Include="Assets\Scripts\IPlayerState.cs" />
     <Compile Include="Assets\Scripts\PlayerStateMachine.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
