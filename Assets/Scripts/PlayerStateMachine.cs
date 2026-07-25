@@ -22,6 +22,10 @@ public class PlayerStateMachine : MonoBehaviour
     //èdóÕ
     public float gravity = 20.0f;
 
+    private bool isAttack;
+
+    public Collider weaponCollider;
+
     private void Awake()
     {
         //_playerObject = GetComponentInChildren<GameObject>();
