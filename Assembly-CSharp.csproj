@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\PlayerAttackState.cs" />
+    <Compile Include="Assets\Scripts\WeaponColliderActive.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PlayerInputScript.cs" />
     <Compile Include="Assets\Scripts\PlayerWeaponAttack.cs" />

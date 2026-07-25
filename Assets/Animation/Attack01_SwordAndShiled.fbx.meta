@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: db509ad77f9b4f84a8eb1989f589b24c
-AssetOrigin:
-  serializedVersion: 1
-  productId: 225148
-  packageName: RPG Tiny Hero Duo PBR Polyart
-  packageVersion: 2.0
-  assetPath: Assets/RPG Tiny Hero Duo/Animation/SwordAndShield/Attack01_SwordAndShiled.fbx
-  uploadId: 521528
+guid: fa6ede6db8342e140bb78bd0aacf0cc0
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable:
@@ -755,7 +748,8 @@ ModelImporter:
     hasTranslationDoF: 1
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0308cf4e83cf517488b60af58b290fe0, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0308cf4e83cf517488b60af58b290fe0,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
