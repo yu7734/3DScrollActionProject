@@ -55,6 +55,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerInputScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateBase.cs" />
     <Compile Include="Assets\Scripts\SlimeEnemy.cs" />
+    <Compile Include="Assets\Scripts\SightCheckerManager.cs" />
     <Compile Include="Assets\Scripts\Player\IPlayerState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerFallState.cs" />
     <Compile Include="Assets\InputSystem_Actions.cs" />
