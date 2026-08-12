@@ -254,15 +254,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4047972025199878, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.382
+      value: 8.23
       objectReference: {fileID: 0}
     - target: {fileID: 4047972025199878, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.023
+      value: -4.51
       objectReference: {fileID: 0}
     - target: {fileID: 4047972025199878, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.24675
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4047972025199878, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -306,6 +306,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1931298151966786, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 616773784}
+    - targetCorrespondingSourceObject: {fileID: 1931298151966786, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616773787}
   m_SourcePrefab: {fileID: 100100000, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
 --- !u!1 &367854020
 GameObject:
@@ -616,6 +619,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlimeEnemy
   moveSpeed: 1
+--- !u!4 &616773786 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4047972025199878, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
+  m_PrefabInstance: {fileID: 334555088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &616773787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616773781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6973b354175d7894c8681b5a4388086a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SightCheckerManager
+  _self: {fileID: 616773786}
+  _target: {fileID: 367854021}
+  _sightAngle: 20
+  _maxDistance: 5
 --- !u!1 &676304057
 GameObject:
   m_ObjectHideFlags: 0

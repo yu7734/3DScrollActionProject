@@ -3,7 +3,8 @@ using UnityEngine;
 public class SlimeEnemy : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
-    Rigidbody rigidbody;
+    private Rigidbody rigidbody;
+    private Vector3 moveDirection;//敵の進行方向
 
     private void Awake()
     {
@@ -13,13 +14,13 @@ public class SlimeEnemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        moveDirection = Vector2.left;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ChangeMoveDirection();
     }
 
     private void FixedUpdate()
@@ -29,6 +30,17 @@ public class SlimeEnemy : MonoBehaviour
 
     private void Move()
     {
-        rigidbody.linearVelocity = new Vector3(-moveSpeed, 0, 0);
+        rigidbody.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//向いている向きの方向に進む
+    }
+
+    private void ChangeMoveDirection()
+    {
+        Vector2 halfSize = transform.lossyScale / 2;//オブジェクトの2分１のサイズの変数
+        int layerMask = LayerMask.GetMask("Floor");//床のレイヤーを取得する変数
+        RaycastHit hit;
+        Debug.DrawRay(transform.position, moveDirection, Color.red);// Sceneビューでデバッグ用にRayを可視化
+        if (!Physics.Raycast(transform.position, moveDirection, out hit, 1)) return;
+        if (hit.transform.tag == "Floor")
+            moveDirection = -moveDirection;//壁があれば逆方向に向きを変える
     }
 }
