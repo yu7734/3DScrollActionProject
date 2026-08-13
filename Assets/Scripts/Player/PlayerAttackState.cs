@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerAttackState : PlayerStateBase
 {
-    public PlayerAttackState(PlayerStateMachine stateMachine) : base(stateMachine){}
+    public PlayerAttackState(PlayerMovementStateMachine stateMachine) : base(stateMachine){}
 
     public override void Enter()
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateMachine : MonoBehaviour
+public class PlayerMovementStateMachine : MonoBehaviour
 {
 
     //現在のステート
@@ -19,8 +19,8 @@ public class PlayerStateMachine : MonoBehaviour
     public PlayerInputScript _playerInput;
     public float playerMoveSpeed;
     public float playerJumpPower;
-    //重力
-    public float gravity = 20.0f;
+
+    public float gravity = 20.0f;//重力
 
     private bool isAttack;
 

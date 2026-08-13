@@ -5,12 +5,12 @@ public class PlayerInputScript: MonoBehaviour
 {
     private InputSystem_Actions inputActions;
     //ステートマシンスクリプト
-    private PlayerStateMachine _playerStateMachine;
+    private PlayerMovementStateMachine _playerMovementStateMachine;
     public Vector2 _inputMove = Vector2.zero;
 
     private void Awake()
     {
-        _playerStateMachine = GetComponent<PlayerStateMachine>();
+        _playerMovementStateMachine = GetComponent<PlayerMovementStateMachine>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -60,15 +60,15 @@ public class PlayerInputScript: MonoBehaviour
         {
             //移動ステートに入る
             _inputMove = context.ReadValue<Vector2>();
-            if (_playerStateMachine.characterController.isGrounded)
-                _playerStateMachine.SwicthState(typeof(PlayerMoveState));
+            if (_playerMovementStateMachine.characterController.isGrounded)
+                _playerMovementStateMachine.SwicthState(typeof(PlayerMoveState));
         }
 
         if (context.canceled)
         {
             _inputMove = Vector2.zero;
             //移動ステートを抜け、待機ステートに入る
-            _playerStateMachine.SwicthState(typeof(PlayerIdleState));
+            _playerMovementStateMachine.SwicthState(typeof(PlayerIdleState));
         }
     }
 
@@ -83,13 +83,13 @@ public class PlayerInputScript: MonoBehaviour
         if (context.performed)
         {
             //攻撃ステートに入る
-            if (_playerStateMachine.characterController.isGrounded)
-                _playerStateMachine.SwicthState(typeof(PlayerAttackState));
+            if (_playerMovementStateMachine.characterController.isGrounded)
+                _playerMovementStateMachine.SwicthState(typeof(PlayerAttackState));
         }
 
         if (context.canceled)
         {
-            _playerStateMachine.SwicthState(typeof(PlayerIdleState));
+            _playerMovementStateMachine.SwicthState(typeof(PlayerIdleState));
         }
     }
 
@@ -98,8 +98,8 @@ public class PlayerInputScript: MonoBehaviour
     {
         if (context.started)
         {
-            if (_playerStateMachine.characterController.isGrounded)
-                _playerStateMachine.SwicthState(typeof(PlayerJumpState));
+            if (_playerMovementStateMachine.characterController.isGrounded)
+                _playerMovementStateMachine.SwicthState(typeof(PlayerJumpState));
         }
 
         if (context.canceled)

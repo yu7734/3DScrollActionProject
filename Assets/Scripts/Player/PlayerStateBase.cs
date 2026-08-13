@@ -2,10 +2,10 @@
 
 public abstract class PlayerStateBase : IPlayerState
 {
-    protected PlayerStateMachine stateMachine;
+    protected PlayerMovementStateMachine stateMachine;
 
     //セットするコンストラクタ
-    public PlayerStateBase(PlayerStateMachine stateMachine)
+    public PlayerStateBase(PlayerMovementStateMachine stateMachine)
     {
         this.stateMachine = stateMachine;
     }

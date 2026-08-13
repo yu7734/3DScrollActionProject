@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    private CharacterController characterController;
+    [SerializeField] private int playerHP;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        
     }
 
     // Update is called once per frame
@@ -19,5 +19,12 @@ public class PlayerManager : MonoBehaviour
     private void PlayerMove()
     {
         
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag != "Enemy") return;
+        playerHP--;
+        Debug.Log(playerHP);
     }
 }
