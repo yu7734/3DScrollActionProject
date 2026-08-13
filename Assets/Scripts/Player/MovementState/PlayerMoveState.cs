@@ -24,20 +24,4 @@ public class PlayerMoveState : PlayerStateBase
     {
         stateMachine.CAnima("Walk", false);
     }
-
-    //private void PlayerMove()
-    //{
-    //    //“ü—Í‚É‰ž‚¶‚ÄˆÚ“®
-    //    var moveVelocity = new Vector3(stateMachine._playerInput._inputMove.x * stateMachine.playerMoveSpeed, stateMachine.playerDirection.y, 0);
-
-    //    //“ü—Í‚É‰ž‚¶‚ÄŒü‚«‚ð•Ï‚¦‚é
-    //    if (stateMachine._playerInput._inputMove.x < 0) 
-    //        stateMachine._playerObject.transform.eulerAngles = new Vector3(0, -90, 0);
-    //    else if (stateMachine._playerInput._inputMove.x > 0) 
-    //        stateMachine._playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
-
-    //    moveVelocity.y -= stateMachine.gravity * Time.deltaTime;
-
-    //    stateMachine.characterController.Move(moveVelocity * Time.deltaTime);
-    //}
 }

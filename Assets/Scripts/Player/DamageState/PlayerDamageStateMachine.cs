@@ -8,17 +8,25 @@ public class PlayerDamageStateMachine : MonoBehaviour
 
     //全てのステートを保持するディクショナリ
     Dictionary<System.Type, IPlayerState> states;
+
+    [SerializeField] private int playerHP;
+    private Renderer renderers;
+    private CharacterController characterController;
+
     private void Awake()
     {
-        //_playerObject = GetComponentInChildren<GameObject>();
         //ステートのインスタンス化
         states = new Dictionary<System.Type, IPlayerState>()
         {
-            
+            {typeof(NormalState), new NormalState(this) },
+            {typeof(DamagedState), new DamagedState(this) },
         };
 
+        renderers = GetComponentInChildren<Renderer>();//子オブジェクトのレンダーを取得
+        characterController = GetComponentInChildren<CharacterController>();
+
         //初期ステートの設定
-        SwicthState(typeof(PlayerIdleState));
+        SwicthState(typeof(NormalState));
     }
 
     // Update is called once per frame
@@ -26,6 +34,8 @@ public class PlayerDamageStateMachine : MonoBehaviour
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
+        //Debug.Log(currentState);
+        
     }
 
     public void SwicthState(System.Type newStateType)
@@ -49,4 +59,13 @@ public class PlayerDamageStateMachine : MonoBehaviour
             Debug.LogError($"State not found: {newStateType}");
         }
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)//当たり判定
+    {
+        currentState.OnControllerColliderHit(hit);
+    }
+
+    public int PlayerHP { get { return playerHP; } set { playerHP = Mathf.Max(0, value); } }//プレイヤーの体力のプロパティ
+    public Renderer renderer {  get { return renderers; }  set { renderers = value; } }//レンダーのプロパティ
+    public CharacterController CharacterController { get { return characterController; } }//キャラクターコントローラーのプロパティ
 }

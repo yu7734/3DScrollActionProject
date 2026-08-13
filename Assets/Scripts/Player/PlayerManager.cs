@@ -25,6 +25,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (hit.gameObject.tag != "Enemy") return;
         playerHP--;
-        Debug.Log(playerHP);
+        //Debug.Log(playerHP);
     }
 }

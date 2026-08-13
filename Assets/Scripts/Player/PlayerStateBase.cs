@@ -1,5 +1,7 @@
 //using UnityEngine;
 
+using UnityEngine;
+
 public abstract class PlayerStateBase : IPlayerState
 {
     protected PlayerMovementStateMachine stateMachine;
@@ -20,4 +22,7 @@ public abstract class PlayerStateBase : IPlayerState
     public abstract void Enter();
     public abstract void Update();
     public abstract void Exit();
+
+    //仮想メソッドを用意し、必要なステートだけにオーバーライドする
+    public virtual void OnControllerColliderHit(ControllerColliderHit hit) { } 
 }
