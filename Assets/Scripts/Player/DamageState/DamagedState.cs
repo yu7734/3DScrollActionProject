@@ -14,7 +14,6 @@ public class DamagedState : PlayerStateBase
     public override void Enter()
     {
         damageStateMachine.gameObject.layer = LayerMask.NameToLayer("PlayerDamage");//レイヤー変更
-        Debug.Log(damageStateMachine.gameObject.layer);
         damageStateMachine.StartCoroutine(Damaged());
     }
 
@@ -35,14 +34,21 @@ public class DamagedState : PlayerStateBase
         for (int i = 0; i < 3; ++i)
         {
             yield return new WaitForSeconds(flashInterval);//flashIntervalを待ってから
-            damageStateMachine.renderer.enabled = false;//rendererを非表示
+            RendererEnabled(false);//rendererを非表示
 
             yield return new WaitForSeconds(flashInterval);//flashIntervalを待ってから
-            damageStateMachine.renderer.enabled = true;//rendererを表示
+            RendererEnabled(true);//rendererを表示
         }
 
         damageStateMachine.gameObject.layer = LayerMask.NameToLayer("Default");//レイヤー変更
-        Debug.Log(damageStateMachine.gameObject.layer);
         damageStateMachine.SwicthState(typeof(NormalState));
+    }
+
+    private void RendererEnabled(bool enabled)//レンダーの表示非表示のメソッド
+    {
+        foreach (var r in damageStateMachine.renderer)
+        {
+            r.enabled = enabled;
+        }
     }
 }

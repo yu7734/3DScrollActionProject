@@ -27,7 +27,7 @@ public class NormalState : PlayerStateBase
     {
         if (hit.gameObject.tag != "Enemy") return;//“G‚É“–‚½‚Á‚½‚ç
         damageStateMachine.PlayerHP--;//HP‚ðŒ¸‚ç‚·
-        //Debug.Log(damageStateMachine.PlayerHP);
+        Debug.Log(damageStateMachine.PlayerHP);
         damageStateMachine.SwicthState(typeof(DamagedState));
     }
 }

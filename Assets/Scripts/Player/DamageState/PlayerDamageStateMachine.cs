@@ -10,7 +10,7 @@ public class PlayerDamageStateMachine : MonoBehaviour
     Dictionary<System.Type, IPlayerState> states;
 
     [SerializeField] private int playerHP;
-    private Renderer renderers;
+    private Renderer[] renderers;
     private CharacterController characterController;
 
     private void Awake()
@@ -22,7 +22,7 @@ public class PlayerDamageStateMachine : MonoBehaviour
             {typeof(DamagedState), new DamagedState(this) },
         };
 
-        renderers = GetComponentInChildren<Renderer>();//子オブジェクトのレンダーを取得
+        renderers = GetComponentsInChildren<Renderer>();//子オブジェクトのレンダーを取得
         characterController = GetComponentInChildren<CharacterController>();
 
         //初期ステートの設定
@@ -66,6 +66,6 @@ public class PlayerDamageStateMachine : MonoBehaviour
     }
 
     public int PlayerHP { get { return playerHP; } set { playerHP = Mathf.Max(0, value); } }//プレイヤーの体力のプロパティ
-    public Renderer renderer {  get { return renderers; }  set { renderers = value; } }//レンダーのプロパティ
+    public Renderer[] renderer {  get { return renderers; }  set { renderers = value; } }//レンダーのプロパティ
     public CharacterController CharacterController { get { return characterController; } }//キャラクターコントローラーのプロパティ
 }
