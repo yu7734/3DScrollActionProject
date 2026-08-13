@@ -53,6 +53,7 @@
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateBase.cs" />
+    <Compile Include="Assets\Scripts\Player\MovementState\PlayerMoveState.cs" />
     <Compile Include="Assets\Scripts\SlimeEnemy.cs" />
     <Compile Include="Assets\Scripts\SightCheckerManager.cs" />
     <Compile Include="Assets\Scripts\Player\IPlayerState.cs" />
@@ -60,7 +61,6 @@
     <Compile Include="Assets\InputSystem_Actions.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerJumpState.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMoveState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerFallState.cs" />
