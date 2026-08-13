@@ -15,7 +15,7 @@ public class SlimeEnemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveDirection = Vector2.left;
+        moveDirection = Vector2.left;//Å‰‚Í¶Œü‚«
     }
 
     // Update is called once per frame
