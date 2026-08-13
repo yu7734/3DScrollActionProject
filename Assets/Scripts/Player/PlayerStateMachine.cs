@@ -51,7 +51,7 @@ public class PlayerStateMachine : MonoBehaviour
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
     }
 
     public void SwicthState(System.Type newStateType)
