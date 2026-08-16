@@ -20,6 +20,7 @@ public class PlayerDamageStateMachine : MonoBehaviour
         {
             {typeof(NormalState), new NormalState(this) },
             {typeof(DamagedState), new DamagedState(this) },
+            {typeof(DeadState), new DeadState(this) }
         };
 
         renderers = GetComponentsInChildren<Renderer>();//子オブジェクトのレンダーを取得
