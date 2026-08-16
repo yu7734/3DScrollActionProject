@@ -31,12 +31,6 @@ public class NormalState : PlayerStateBase
         if (damageStateMachine.PlayerHP <= 0)
             damageStateMachine.SwicthState(typeof(DeadState));//‘Ì—Í‚ª0‚È‚çŽ€–S
         else
-            damageStateMachine.SwicthState(typeof(DamagedState));
-    }
-
-    private void PlayerDie()
-    {
-        if (!(damageStateMachine.PlayerHP <= 0)) return;
-        damageStateMachine.SwicthState(typeof(DeadState));//‘Ì—Í‚ª0‚È‚çŽ€–S
+            damageStateMachine.SwicthState(typeof(DamagedState));//‚»‚¤‚Å‚È‚¯‚ê‚Îƒ_ƒ[ƒWŒã‚Ì–³“GŽžŠÔ
     }
 }
