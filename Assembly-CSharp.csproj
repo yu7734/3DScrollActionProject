@@ -64,6 +64,7 @@
     <Compile Include="Assets\InputSystem_Actions.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerJumpState.cs" />
+    <Compile Include="Assets\Scripts\GoalManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\PlayerDamageStateMachine.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
