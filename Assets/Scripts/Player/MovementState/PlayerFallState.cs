@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerFallState : PlayerStateBase
 {
 
-    public PlayerFallState(PlayerStateMachine stateMachine) : base(stateMachine) { }
+    public PlayerFallState(PlayerMovementStateMachine stateMachine) : base(stateMachine) { }
     
     public override void Enter()
     {

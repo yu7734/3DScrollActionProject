@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerStateBase
 {
-    public PlayerJumpState(PlayerStateMachine stateMachine) : base(stateMachine) { }
+    public PlayerJumpState(PlayerMovementStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
-        //ã‚¸ãƒ£ãƒ³ãƒ—ã‚¹ãƒ†ãƒ¼ãƒˆã«å…¥ã£ãŸã‚‰ã‚¸ãƒ£ãƒ³ãƒ—
+        //ƒWƒƒƒ“ƒvƒXƒe[ƒg‚É“ü‚Á‚½‚çƒWƒƒƒ“ƒv
         Jump();
     }
 
     public override void Update()
     {
-        //é‡åŠ›
+        //d—Í
         stateMachine.playerDirection.y -= stateMachine.gravity * Time.deltaTime;
-        //ã‚¸ãƒ£ãƒ³ãƒ—ä¸­ã§ã‚‚ç§»å‹•
+        //ƒWƒƒƒ“ƒv’†‚Å‚àˆÚ“®
         stateMachine.PlayerMove();
 
         if (stateMachine.characterController.isGrounded)

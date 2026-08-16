@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerIdleState : PlayerStateBase
 {
     
-    public PlayerIdleState(PlayerStateMachine stateMachine) : base(stateMachine)
+    public PlayerIdleState(PlayerMovementStateMachine stateMachine) : base(stateMachine)
     {
 
     }
