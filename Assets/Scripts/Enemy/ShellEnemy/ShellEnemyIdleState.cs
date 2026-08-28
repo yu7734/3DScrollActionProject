@@ -13,7 +13,8 @@ public class ShellEnemyIdleState : PlayerStateBase
     }
     public override void Update()
     {
-        
+        if (!sightCheck.IsRock()) return;
+        shellEnemyState.SwicthState(typeof(ShellEnemyChaseState));
     }
     public override void Exit()
     {

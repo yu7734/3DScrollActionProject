@@ -54,7 +54,6 @@
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyState.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\NormalState.cs" />
-    <Compile Include="Assets\Scripts\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateBase.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerMoveState.cs" />
@@ -71,10 +70,12 @@
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyChaseState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\PlayerDamageStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyBackState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerFallState.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerMovementStateMachine.cs" />
     <Compile Include="Assets\Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\Player\WeaponColliderActive.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyIdleState.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerAttackState.cs" />

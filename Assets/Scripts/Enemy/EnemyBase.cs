@@ -5,6 +5,7 @@ public class EnemyBase : MonoBehaviour
 {
     [SerializeField] protected float moveSpeed;
     protected Rigidbody rigidbody;
+    [SerializeField] protected float rayDistance; //Ray‚Ì‹——£
     protected Vector3 moveDirection;//“G‚Ìis•ûŒü
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ShellEnemyAttackState : PlayerStateBase
+public class ShellEnemyBackState : PlayerStateBase
 {
-    public ShellEnemyAttackState(ShellEnemyState shellEnemyState) : base(shellEnemyState)
+    public ShellEnemyBackState(ShellEnemyState shellEnemyState) : base(shellEnemyState)
     {
 
     }

@@ -3,7 +3,6 @@ using UnityEngine;
 public class SlimeEnemy : EnemyBase
 {
     [SerializeField] private EnemyBase enemyBase;
-    [SerializeField] private float rayDistance;
 
     private void Awake()
     {
@@ -24,7 +23,7 @@ public class SlimeEnemy : EnemyBase
 
     private void FixedUpdate()
     {
-        enemyBase.Move();
+        Move();
     }
 
     private void ChangeMoveDirection()

@@ -3,15 +3,13 @@ using UnityEngine;
 
 public class ShellEnemyState : EnemyBase
 {
+    [SerializeField] private Transform idlePoint;
+
     //現在のステート
     private ICharactorState currentState;
 
     //全てのステートを保持するディクショナリ
     Dictionary<System.Type, ICharactorState> states;
-
-    [SerializeField] private int playerHP;
-    private Renderer[] renderers;
-    private CharacterController characterController;
 
     private void Awake()
     {
@@ -19,11 +17,10 @@ public class ShellEnemyState : EnemyBase
         states = new Dictionary<System.Type, ICharactorState>()
         {
             { typeof(ShellEnemyIdleState), new ShellEnemyIdleState(this)},
-            { typeof(ShellEnemyChaseState), new ShellEnemyIdleState(this)},
+            { typeof(ShellEnemyChaseState), new ShellEnemyChaseState(this)},
+            { typeof(ShellEnemyBackState), new ShellEnemyBackState(this)},
+            { typeof(ShellEnemyAttackState), new ShellEnemyAttackState(this)},
         };
-
-        renderers = GetComponentsInChildren<Renderer>();//子オブジェクトのレンダーを取得
-        characterController = GetComponentInChildren<CharacterController>();
 
         //初期ステートの設定
         SwicthState(typeof(NormalState));
@@ -59,4 +56,17 @@ public class ShellEnemyState : EnemyBase
             Debug.LogError($"State not found: {newStateType}");
         }
     }
+
+    public void AttackRay()
+    {
+        Vector2 halfSize = transform.lossyScale / 2;//オブジェクトの2分１のサイズの変数
+        int layerMask = LayerMask.GetMask("Player");//床のレイヤーを取得する変数
+        RaycastHit hit;
+        Debug.DrawRay(transform.position, moveDirection * rayDistance, Color.red);// Sceneビューでデバッグ用にRayを可視化
+        if (!Physics.Raycast(transform.position, moveDirection, out hit, rayDistance, layerMask)) return;
+        if (hit.transform.tag == "Player")//Rayがプレイヤーにヒットしたら
+            SwicthState(typeof(ShellEnemyAttackState));//攻撃ステートに切り替え
+    }
+
+    public Transform idlePointTransform { get; private set; }
 }
