@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDamageStateMachine : MonoBehaviour
+public class ShellEnemyState : EnemyBase
 {
     //現在のステート
     private ICharactorState currentState;
@@ -18,9 +18,8 @@ public class PlayerDamageStateMachine : MonoBehaviour
         //ステートのインスタンス化
         states = new Dictionary<System.Type, ICharactorState>()
         {
-            {typeof(NormalState), new NormalState(this) },
-            {typeof(DamagedState), new DamagedState(this) },
-            {typeof(DeadState), new DeadState(this) }
+            { typeof(ShellEnemyIdleState), new ShellEnemyIdleState(this)},
+            { typeof(ShellEnemyChaseState), new ShellEnemyIdleState(this)},
         };
 
         renderers = GetComponentsInChildren<Renderer>();//子オブジェクトのレンダーを取得
@@ -36,7 +35,7 @@ public class PlayerDamageStateMachine : MonoBehaviour
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
         //Debug.Log(currentState);
-        
+
     }
 
     public void SwicthState(System.Type newStateType)
@@ -60,13 +59,4 @@ public class PlayerDamageStateMachine : MonoBehaviour
             Debug.LogError($"State not found: {newStateType}");
         }
     }
-
-    private void OnControllerColliderHit(ControllerColliderHit hit)//当たり判定
-    {
-        currentState.OnControllerColliderHit(hit);
-    }
-
-    public int PlayerHP { get { return playerHP; } set { playerHP = Mathf.Max(0, value); } }//プレイヤーの体力のプロパティ
-    public Renderer[] renderer {  get { return renderers; }  set { renderers = value; } }//レンダーのプロパティ
-    public CharacterController CharacterController { get { return characterController; } }//キャラクターコントローラーのプロパティ
 }

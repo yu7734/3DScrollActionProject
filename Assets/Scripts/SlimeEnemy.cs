@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public class SlimeEnemy : MonoBehaviour
+public class SlimeEnemy : EnemyBase
 {
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private EnemyBase enemyBase;
     [SerializeField] private float rayDistance;
-    private Rigidbody rigidbody;
-    private Vector3 moveDirection;//“G‚Ìis•ûŒü
 
     private void Awake()
     {
@@ -26,12 +24,7 @@ public class SlimeEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move();
-    }
-
-    private void Move()
-    {
-        rigidbody.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//Œü‚¢‚Ä‚¢‚éŒü‚«‚Ì•ûŒü‚Éi‚Ş
+        enemyBase.Move();
     }
 
     private void ChangeMoveDirection()

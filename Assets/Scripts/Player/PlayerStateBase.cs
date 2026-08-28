@@ -2,10 +2,11 @@
 
 using UnityEngine;
 
-public abstract class PlayerStateBase : IPlayerState
+public abstract class PlayerStateBase : ICharactorState
 {
     protected PlayerMovementStateMachine stateMachine;
     protected PlayerDamageStateMachine damageStateMachine;
+    protected ShellEnemyState shellEnemyState;
 
     //セットするコンストラクタ
     public PlayerStateBase(PlayerMovementStateMachine stateMachine)
@@ -16,6 +17,11 @@ public abstract class PlayerStateBase : IPlayerState
     public PlayerStateBase(PlayerDamageStateMachine stateMachine)
     {
         this.damageStateMachine = stateMachine;
+    }
+
+    public PlayerStateBase (ShellEnemyState stateMachine)
+    {
+        this.shellEnemyState = stateMachine;
     }
 
     //abstractメソッドは継承先で絶対に実装しなければならない

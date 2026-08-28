@@ -5,10 +5,10 @@ public class PlayerMovementStateMachine : MonoBehaviour
 {
 
     //現在のステート
-    private IPlayerState currentState;
+    private ICharactorState currentState;
 
     //全てのステートを保持するディクショナリ
-    Dictionary<System.Type, IPlayerState> states;
+    Dictionary<System.Type, ICharactorState> states;
 
     //オブジェクト、クラスを参照
     private Animator animator;
@@ -26,7 +26,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         //_playerObject = GetComponentInChildren<GameObject>();
         //ステートのインスタンス化
-        states = new Dictionary<System.Type, IPlayerState>()
+        states = new Dictionary<System.Type, ICharactorState>()
         {
             {typeof(PlayerIdleState),   new PlayerIdleState(this) },
             {typeof(PlayerMoveState),   new PlayerMoveState(this) },
@@ -59,7 +59,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
         }
 
         //新しいステートを取得
-        if (states.TryGetValue(newStateType, out IPlayerState newState))
+        if (states.TryGetValue(newStateType, out ICharactorState newState))
         {
             currentState = newState;
             //新しいステートのEnterを呼び出す

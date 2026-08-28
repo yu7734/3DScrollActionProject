@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IPlayerState
+public interface ICharactorState
 {
     //ステートに入った時実行される関数
     void Enter();
