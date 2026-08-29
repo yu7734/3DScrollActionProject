@@ -71,11 +71,6 @@ public class ShellEnemyState : EnemyBase
             SwicthState(typeof(ShellEnemyAttackState));//攻撃ステートに変更
     }
 
-    public void ShellEnemyMove()
-    {
-        rb.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//向いている向きの方向に進む
-    }
-
     public Transform idlePointTransform { get; private set; }
     public SightCheckerManager sightCheckerManager { get { return sightCheckerManager; } set { sightCheckerManager = value; } }
 }
