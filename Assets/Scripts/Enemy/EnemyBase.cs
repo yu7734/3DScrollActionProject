@@ -4,13 +4,18 @@ using UnityEngine.EventSystems;
 public class EnemyBase : MonoBehaviour
 {
     [SerializeField] protected float moveSpeed;
-    protected Rigidbody rigidbody;
+    protected Rigidbody rb;
     [SerializeField] protected float rayDistance; //Rayの距離
     protected Vector3 moveDirection;//敵の進行方向
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    protected virtual void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
+    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    protected virtual void Start()
+    {
+        moveDirection = Vector2.left;//最初は左向き
     }
 
     // Update is called once per frame
@@ -21,6 +26,6 @@ public class EnemyBase : MonoBehaviour
 
     public void Move()
     {
-        rigidbody.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//向いている向きの方向に進む
+        rb.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//向いている向きの方向に進む
     }
 }

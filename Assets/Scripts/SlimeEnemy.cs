@@ -4,17 +4,6 @@ public class SlimeEnemy : EnemyBase
 {
     [SerializeField] private EnemyBase enemyBase;
 
-    private void Awake()
-    {
-        rigidbody = GetComponent<Rigidbody>();
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        moveDirection = Vector2.left;//Å‰‚Í¶Œü‚«
-    }
-
     // Update is called once per frame
     void Update()
     {

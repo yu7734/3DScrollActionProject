@@ -5335,6 +5335,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1524411113276028, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 444758553}
+    - targetCorrespondingSourceObject: {fileID: 1524411113276028, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 444758556}
   m_SourcePrefab: {fileID: 100100000, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
 --- !u!1 &444758550 stripped
 GameObject:
@@ -5403,13 +5406,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SightCheckerManager
   _self: {fileID: 444758555}
   _target: {fileID: 367854021}
-  _sightAngle: 15
+  _sightAngle: 20
   _maxDistance: 5
 --- !u!4 &444758555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
   m_PrefabInstance: {fileID: 444758549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &444758556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444758550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f377fb3ba16854591e58fe69fe23a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShellEnemyState
+  moveSpeed: 5
+  rayDistance: 5
+  idlePoint: {fileID: 548253765}
+  sightChecker: {fileID: 444758553}
 --- !u!4 &487355543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}

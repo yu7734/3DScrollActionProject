@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShellEnemyState : EnemyBase
 {
     [SerializeField] private Transform idlePoint;
+    [SerializeField] public SightCheckerManager sightChecker;
 
     //現在のステート
     private ICharactorState currentState;
@@ -11,8 +13,9 @@ public class ShellEnemyState : EnemyBase
     //全てのステートを保持するディクショナリ
     Dictionary<System.Type, ICharactorState> states;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         //ステートのインスタンス化
         states = new Dictionary<System.Type, ICharactorState>()
         {
@@ -23,7 +26,7 @@ public class ShellEnemyState : EnemyBase
         };
 
         //初期ステートの設定
-        SwicthState(typeof(NormalState));
+        SwicthState(typeof(ShellEnemyIdleState));
     }
 
     // Update is called once per frame
@@ -31,7 +34,6 @@ public class ShellEnemyState : EnemyBase
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
-        //Debug.Log(currentState);
 
     }
 
@@ -47,6 +49,7 @@ public class ShellEnemyState : EnemyBase
         if (states.TryGetValue(newStateType, out ICharactorState newState))
         {
             currentState = newState;
+            Debug.Log(currentState);
             //新しいステートのEnterを呼び出す
             currentState.Enter();
         }
@@ -60,13 +63,19 @@ public class ShellEnemyState : EnemyBase
     public void AttackRay()
     {
         Vector2 halfSize = transform.lossyScale / 2;//オブジェクトの2分１のサイズの変数
-        int layerMask = LayerMask.GetMask("Player");//床のレイヤーを取得する変数
+        int layerMask = LayerMask.GetMask("Player");//プレイヤーのレイヤーを取得する変数
         RaycastHit hit;
-        Debug.DrawRay(transform.position, moveDirection * rayDistance, Color.red);// Sceneビューでデバッグ用にRayを可視化
+        Debug.DrawRay(transform.position, moveDirection * rayDistance, Color.red);// Scene?r???[??f?o?b?O?p??Ray???????
         if (!Physics.Raycast(transform.position, moveDirection, out hit, rayDistance, layerMask)) return;
         if (hit.transform.tag == "Player")//Rayがプレイヤーにヒットしたら
-            SwicthState(typeof(ShellEnemyAttackState));//攻撃ステートに切り替え
+            SwicthState(typeof(ShellEnemyAttackState));//攻撃ステートに変更
+    }
+
+    public void ShellEnemyMove()
+    {
+        rb.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//向いている向きの方向に進む
     }
 
     public Transform idlePointTransform { get; private set; }
+    public SightCheckerManager sightCheckerManager { get { return sightCheckerManager; } set { sightCheckerManager = value; } }
 }

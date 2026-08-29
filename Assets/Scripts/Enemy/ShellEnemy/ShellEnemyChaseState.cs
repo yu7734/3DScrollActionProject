@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ShellEnemyChaseState : PlayerStateBase
 {
-    private SightCheckerManager sightCheck;
     public ShellEnemyChaseState(ShellEnemyState shellEnemyState) : base(shellEnemyState)
     {
 
@@ -15,7 +14,7 @@ public class ShellEnemyChaseState : PlayerStateBase
     {
         shellEnemyState.Move();//移動
 
-        if (!sightCheck.IsRock())//視界がプレイヤーから外れたら待機ポイントに戻るステートに変更
+        if (!shellEnemyState.sightChecker.IsRock())//視界がプレイヤーから外れたら待機ポイントに戻るステートに変更
         {
             shellEnemyState.SwicthState(typeof(ShellEnemyBackState));
         }
