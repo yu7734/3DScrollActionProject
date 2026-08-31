@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShellEnemyState : EnemyBase
 {
-    [SerializeField] private Transform idlePoint;
-    [SerializeField] public SightCheckerManager sightChecker;
+    [SerializeField] private Transform idlePoint; //待機ポイントの座標
+    [SerializeField] private SightCheckerManager sightChecker;//視界クラス
 
     //現在のステート
     private ICharactorState currentState;
@@ -71,6 +71,6 @@ public class ShellEnemyState : EnemyBase
             SwicthState(typeof(ShellEnemyAttackState));//攻撃ステートに変更
     }
 
-    public Transform idlePointTransform { get; private set; }
-    public SightCheckerManager sightCheckerManager { get { return sightCheckerManager; } set { sightCheckerManager = value; } }
+    public Transform idlePointTransform { get { return idlePoint; } set {  idlePoint = value; }  }
+    public SightCheckerManager sightCheckerManager { get { return sightChecker; } set { sightChecker = value; } }
 }

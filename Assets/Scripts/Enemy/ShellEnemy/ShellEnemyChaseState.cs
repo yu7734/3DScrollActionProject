@@ -14,7 +14,7 @@ public class ShellEnemyChaseState : PlayerStateBase
     {
         shellEnemyState.Move();//移動
 
-        if (!shellEnemyState.sightChecker.IsRock())//視界がプレイヤーから外れたら待機ポイントに戻るステートに変更
+        if (!shellEnemyState.sightCheckerManager.IsRock())//視界がプレイヤーから外れたら待機ポイントに戻るステートに変更
         {
             shellEnemyState.SwicthState(typeof(ShellEnemyBackState));
         }

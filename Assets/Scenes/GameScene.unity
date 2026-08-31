@@ -5425,7 +5425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f377fb3ba16854591e58fe69fe23a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShellEnemyState
-  moveSpeed: 5
+  moveSpeed: 2
   rayDistance: 5
   idlePoint: {fileID: 548253765}
   sightChecker: {fileID: 444758553}
