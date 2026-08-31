@@ -28,4 +28,6 @@ public class EnemyBase : MonoBehaviour
     {
         rb.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//Œü‚¢‚Ä‚¢‚éŒü‚«‚Ì•ûŒü‚Éi‚Ş
     }
+
+    public Vector3 MoveDirection { get { return moveDirection; } set { moveDirection = value; } }
 }
