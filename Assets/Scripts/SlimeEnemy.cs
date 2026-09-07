@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class SlimeEnemy : EnemyBase
 {
-    [SerializeField] private EnemyBase enemyBase;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +22,9 @@ public class SlimeEnemy : EnemyBase
         Debug.DrawRay(transform.position, moveDirection * rayDistance, Color.red);// Sceneビューでデバッグ用にRayを可視化
         if (!Physics.Raycast(transform.position, moveDirection, out hit, rayDistance, layerMask)) return;
         if (hit.transform.tag == "Floor")
+        {
             moveDirection = -moveDirection;//壁があれば逆方向に向きを変える
+            transform.Rotate(new Vector3(0, 180, 0));
+        }
     }
 }

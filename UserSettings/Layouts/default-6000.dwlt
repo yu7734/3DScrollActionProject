@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 26
+  controlID: 156
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 51
+  controlID: 80
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -1274,9 +1274,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 54.776752, y: 11.0001335, z: -0.010543168}
+    m_Target: {x: 82.0583, y: 10.70085, z: -0.01054}
     speed: 2
-    m_Value: {x: 54.776752, y: 11.0001335, z: -0.010543168}
+    m_Value: {x: 82.0583, y: 10.70085, z: -0.01054}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1326,9 +1326,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 3.373454
+    m_Target: 3.0205612
     speed: 2
-    m_Value: 3.373454
+    m_Value: 3.0205612
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1506,9 +1506,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 9bbcf96c9a254c5ba654027c656d7b39, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 1f68948a5bb74f2fa9e9087a872750e9, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107040346203751106, guid: 9bbcf96c9a254c5ba654027c656d7b39, type: 2}
+  - m_Target: {fileID: 1107232464675883738, guid: 1f68948a5bb74f2fa9e9087a872750e9, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1710,7 +1710,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -1302
+      - m_Data: -1304
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1804,9 +1804,9 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 61410
+    - m_Data: 50894
     m_LastClickedID:
-      m_Data: 61410
+      m_Data: 50894
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 50520
@@ -1875,8 +1875,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs:
+    - m_Data: 49028
+    m_LastClickedInstanceID: 49028
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 46478
