@@ -20,15 +20,9 @@ public class ShellEnemyBackState : PlayerStateBase
         var idlePoint = shellEnemyState.idlePointTransform.position.x;
         //待機ポイントが右か左にあるかによって向きを変える
         if (enemyPosition < idlePoint)
-        {
             shellEnemyState.MoveDirection = Vector2.right;
-            shellEnemyState.transform.rotation = Quaternion.Euler(0, 90, 0);
-        }
         else
-        {
             shellEnemyState.MoveDirection = Vector2.left;
-            shellEnemyState.transform.rotation = Quaternion.Euler(0, -90, 0);
-        }
 
         //視界に入ったら追跡ステート
         if (shellEnemyState.sightCheckerManager.IsRock()) shellEnemyState.SwicthState(typeof(ShellEnemyChaseState));
