@@ -7,6 +7,8 @@ public class ShellEnemyState : EnemyBase
     [SerializeField] private Transform idlePoint; //待機ポイントの座標
     [SerializeField] private SightCheckerManager sightChecker;//視界クラス
 
+    RaycastHit hit;
+
     //現在のステート
     private ICharactorState currentState;
 
@@ -34,7 +36,6 @@ public class ShellEnemyState : EnemyBase
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
-
     }
 
     public void SwicthState(System.Type newStateType)
@@ -64,11 +65,15 @@ public class ShellEnemyState : EnemyBase
     {
         Vector2 halfSize = transform.lossyScale / 2;//オブジェクトの2分１のサイズの変数
         int layerMask = LayerMask.GetMask("Player");//プレイヤーのレイヤーを取得する変数
-        RaycastHit hit;
         Debug.DrawRay(transform.position, moveDirection * rayDistance, Color.red);// Scene?r???[??f?o?b?O?p??Ray???????
         if (!Physics.Raycast(transform.position, moveDirection, out hit, rayDistance, layerMask)) return;
         if (hit.transform.tag == "Player")//Rayがプレイヤーにヒットしたら
-            SwicthState(typeof(ShellEnemyAttackState));//攻撃ステートに変更
+            SwicthState(typeof(ShellEnemyChaseState));
+    }
+
+    public void AnimaChange(string animationClip, bool isAnima)//ステートクラスでアニメーションを変える関数
+    {
+        animator.SetBool(animationClip, isAnima);
     }
 
     public Transform idlePointTransform { get { return idlePoint; } set {  idlePoint = value; }  }

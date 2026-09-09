@@ -8,13 +8,11 @@ public class ShellEnemyBackState : PlayerStateBase
     }
     public override void Enter()
     {
-
+        shellEnemyState.AnimaChange("isBack", true);
     }
     public override void Update()
     {
         shellEnemyState.Move();
-
-        Debug.Log(shellEnemyState.MoveDirection);
 
         var enemyPosition = shellEnemyState.transform.position.x;
         var idlePoint = shellEnemyState.idlePointTransform.position.x;
@@ -25,7 +23,8 @@ public class ShellEnemyBackState : PlayerStateBase
             shellEnemyState.MoveDirection = Vector2.left;
 
         //視界に入ったら追跡ステート
-        if (shellEnemyState.sightCheckerManager.IsRock()) shellEnemyState.SwicthState(typeof(ShellEnemyChaseState));
+        if (shellEnemyState.sightCheckerManager.IsRock()) 
+            shellEnemyState.SwicthState(typeof(ShellEnemyChaseState));
 
         //戻ったら待機ステート
         if (idlePoint - 1 < enemyPosition && enemyPosition < idlePoint + 1)
@@ -33,6 +32,6 @@ public class ShellEnemyBackState : PlayerStateBase
     }
     public override void Exit()
     {
-
+        shellEnemyState.AnimaChange("isBack", false);
     }
 }

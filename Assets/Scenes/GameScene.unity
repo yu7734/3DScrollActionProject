@@ -5431,7 +5431,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShellEnemyState
   moveSpeed: 2
   rayDistance: 5
-  animator: {fileID: 0}
   idlePoint: {fileID: 548253765}
   sightChecker: {fileID: 444758553}
 --- !u!4 &487355543 stripped

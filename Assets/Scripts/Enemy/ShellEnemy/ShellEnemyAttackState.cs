@@ -8,7 +8,7 @@ public class ShellEnemyAttackState : PlayerStateBase
     }
     public override void Enter()
     {
-
+        shellEnemyState.AnimaChange("isAttack", true);
     }
     public override void Update()
     {
@@ -16,6 +16,6 @@ public class ShellEnemyAttackState : PlayerStateBase
     }
     public override void Exit()
     {
-
+        
     }
 }
