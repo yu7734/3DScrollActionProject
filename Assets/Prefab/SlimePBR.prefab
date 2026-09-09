@@ -206,7 +206,7 @@ Animator:
   m_GameObject: {fileID: 2570088024238667641}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6520c6d7889f4c72b416f07f34edd515, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9bbcf96c9a254c5ba654027c656d7b39, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9723650cbe0b39b4e96979a0ae13a31c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlimeEnemy
   moveSpeed: 1
   rayDistance: 1
+  animator: {fileID: 0}
 --- !u!114 &1761837322293944876
 MonoBehaviour:
   m_ObjectHideFlags: 0

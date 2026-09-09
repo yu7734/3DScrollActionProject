@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 156
+  controlID: 26
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -1274,9 +1274,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 82.0583, y: 10.70085, z: -0.01054}
+    m_Target: {x: 75.633446, y: 12.720919, z: -0.01054}
     speed: 2
-    m_Value: {x: 82.0583, y: 10.70085, z: -0.01054}
+    m_Value: {x: 75.633446, y: 12.720919, z: -0.01054}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1326,9 +1326,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 3.0205612
+    m_Target: 6.1086926
     speed: 2
-    m_Value: 3.0205612
+    m_Value: 6.1086926
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1710,7 +1710,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -1304
+      - m_Data: -1302
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1785,7 +1785,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Enemy/ShellEnemy
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Enemy/ShellEnemy
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ike2yu\Documents\GitHub\3DScrollActionProject
   m_LockTracker:
@@ -1804,9 +1804,9 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 50894
+    - m_Data: 50520
     m_LastClickedID:
-      m_Data: 50894
+      m_Data: 50520
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 50520
@@ -1875,10 +1875,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs:
-    - m_Data: 49028
-    m_LastClickedInstanceID: 49028
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: []
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 46478
     - m_Data: 49200

@@ -7,6 +7,7 @@ public class EnemyBase : MonoBehaviour
     protected Rigidbody rb;
     [SerializeField] protected float rayDistance; //Ray‚Ì‹——£
     protected Vector3 moveDirection;//“G‚Ìis•ûŒü
+    [SerializeField] protected Animator animator;
 
     protected virtual void Awake()
     {
