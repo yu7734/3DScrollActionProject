@@ -7,11 +7,12 @@ public class EnemyBase : MonoBehaviour
     protected Rigidbody rb;
     [SerializeField] protected float rayDistance; //Ray‚Ì‹——£
     protected Vector3 moveDirection;//“G‚Ìis•ûŒü
-    [SerializeField] protected Animator animator;
+    protected Animator animator;
 
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()

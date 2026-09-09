@@ -5322,6 +5322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95706204029656638, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e907ad7d78b1833498167dd481ee1887, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5427,6 +5431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShellEnemyState
   moveSpeed: 2
   rayDistance: 5
+  animator: {fileID: 0}
   idlePoint: {fileID: 548253765}
   sightChecker: {fileID: 444758553}
 --- !u!4 &487355543 stripped
