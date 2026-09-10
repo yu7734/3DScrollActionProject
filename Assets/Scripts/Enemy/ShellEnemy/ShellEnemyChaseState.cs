@@ -21,6 +21,6 @@ public class ShellEnemyChaseState : PlayerStateBase
     }
     public override void Exit()
     {
-
+        shellEnemyState.AnimaChange("isChase", false);
     }
 }
