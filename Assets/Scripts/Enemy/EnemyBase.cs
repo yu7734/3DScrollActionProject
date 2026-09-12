@@ -8,6 +8,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected float rayDistance; //Rayの距離
     protected Vector3 moveDirection;//敵の進行方向
     protected Animator animator;
+    public delegate void HitRay(); //Rayが当たった時の処理をするデリゲートを宣言
+    public HitRay hitRay; //関数を変数に
 
     protected virtual void Awake()
     {
@@ -37,6 +39,16 @@ public class EnemyBase : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 90, 0);
         }
+    }
+
+    public void EnemyRay(string hitObject, HitRay hitRay)　//rayが当たったときの処理
+    {
+        Debug.DrawRay(transform.position, MoveDirection * rayDistance, Color.red);
+        RaycastHit hit;
+        if (!Physics.Raycast(transform.position, moveDirection, out hit, rayDistance)) return;
+        if (!(hit.transform.tag == hitObject)) return;
+        Debug.Log("ヒット");
+        hitRay();
     }
 
     public Vector3 MoveDirection { get { return moveDirection; } set { moveDirection = value; } }

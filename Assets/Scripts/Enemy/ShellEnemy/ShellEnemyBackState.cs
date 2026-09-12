@@ -15,7 +15,8 @@ public class ShellEnemyBackState : PlayerStateBase
         shellEnemyState.Move();
 
         var enemyPosition = shellEnemyState.transform.position.x;
-        var idlePoint = shellEnemyState.idlePointTransform.position.x;
+        var idlePoint     = shellEnemyState.idlePointTransform.position.x;
+
         //待機ポイントが右か左にあるかによって向きを変える
         if (enemyPosition < idlePoint)
             shellEnemyState.MoveDirection = Vector2.right;

@@ -1,3 +1,4 @@
+using NUnit.Framework.Internal.Filters;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -59,16 +60,6 @@ public class ShellEnemyState : EnemyBase
             //ステートが見つからなかったらエラー
             Debug.LogError($"State not found: {newStateType}");
         }
-    }
-
-    public void AttackRay()
-    {
-        Vector2 halfSize = transform.lossyScale / 2;//オブジェクトの2分１のサイズの変数
-        int layerMask = LayerMask.GetMask("Player");//プレイヤーのレイヤーを取得する変数
-        Debug.DrawRay(transform.position, moveDirection * rayDistance, Color.red);// Scene?r???[??f?o?b?O?p??Ray???????
-        if (!Physics.Raycast(transform.position, moveDirection, out hit, rayDistance, layerMask)) return;
-        if (hit.transform.tag == "Player")//Rayがプレイヤーにヒットしたら
-            SwicthState(typeof(ShellEnemyChaseState));
     }
 
     public void AnimaChange(string animationClip, bool isAnima)//ステートクラスでアニメーションを変える関数

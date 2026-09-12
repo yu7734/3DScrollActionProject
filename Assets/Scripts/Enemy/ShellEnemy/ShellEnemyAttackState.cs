@@ -16,6 +16,6 @@ public class ShellEnemyAttackState : PlayerStateBase
     }
     public override void Exit()
     {
-        
+        shellEnemyState.AnimaChange("isAttack", true);
     }
 }

@@ -17,10 +17,15 @@ public class ShellEnemyChaseState : PlayerStateBase
         if (!shellEnemyState.sightCheckerManager.IsRock())//視界がプレイヤーから外れたら待機ポイントに戻るステートに変更
             shellEnemyState.SwicthState(typeof(ShellEnemyBackState));
 
-        shellEnemyState.AttackRay();
+        shellEnemyState.EnemyRay("Player", AttackRayHit);
     }
     public override void Exit()
     {
         shellEnemyState.AnimaChange("isChase", false);
+    }
+
+    private void AttackRayHit()
+    {
+        shellEnemyState.SwicthState(typeof(ShellEnemyAttackState));
     }
 }
