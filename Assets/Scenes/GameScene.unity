@@ -5411,7 +5411,7 @@ MonoBehaviour:
   _self: {fileID: 444758555}
   _target: {fileID: 367854021}
   _sightAngle: 20
-  _maxDistance: 5
+  _maxDistance: 8
 --- !u!4 &444758555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4544219117696442, guid: e2aafa8770d34a9591b41bedf4e318ba, type: 3}
@@ -5431,6 +5431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShellEnemyState
   moveSpeed: 2
   rayDistance: 5
+  firePosition: {fileID: 0}
   idlePoint: {fileID: 548253765}
   sightChecker: {fileID: 444758553}
 --- !u!4 &487355543 stripped

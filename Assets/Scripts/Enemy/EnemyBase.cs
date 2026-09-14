@@ -6,6 +6,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected float moveSpeed;
     protected Rigidbody rb;
     [SerializeField] protected float rayDistance; //Rayの距離
+    [SerializeField] protected float rayHeight;//rayの発射する高さ
     protected Vector3 moveDirection;//敵の進行方向
     protected Animator animator;
     public delegate void HitRay(); //Rayが当たった時の処理をするデリゲートを宣言
@@ -43,9 +44,10 @@ public class EnemyBase : MonoBehaviour
 
     public void EnemyRay(string hitObject, HitRay hitRay)　//rayが当たったときの処理
     {
-        Debug.DrawRay(transform.position, MoveDirection * rayDistance, Color.red);
         RaycastHit hit;
-        if (!Physics.Raycast(transform.position, moveDirection, out hit, rayDistance)) return;
+        Vector3 rayOrigin = transform.position + new Vector3(0, rayHeight, 0); //発射位置をVectorに
+        Debug.DrawRay(rayOrigin, MoveDirection * rayDistance, Color.red);
+        if (!Physics.Raycast(rayOrigin, moveDirection, out hit, rayDistance)) return;
         if (!(hit.transform.tag == hitObject)) return;
         Debug.Log("ヒット");
         hitRay();
