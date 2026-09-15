@@ -13,7 +13,7 @@ public class PlayerJumpState : PlayerStateBase
     public override void Update()
     {
         //d—Í
-        //stateMachine.playerDirection.y -= stateMachine.gravity * Time.deltaTime;
+        stateMachine.playerDirection.y += stateMachine.gravity * Time.deltaTime;
         //ƒWƒƒƒ“ƒv’†‚Å‚àˆÚ“®
         stateMachine.PlayerMove();
 

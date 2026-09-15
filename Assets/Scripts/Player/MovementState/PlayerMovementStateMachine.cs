@@ -90,7 +90,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
         else if (_playerInput._inputMove.x > 0)
             _playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
 
-        playerDirection.y += gravity * Time.deltaTime; //èdóÕ
+        //playerDirection.y += gravity * Time.deltaTime; //èdóÕ
         if (characterController.isGrounded && playerDirection.y < 0)
             playerDirection.y = -1;
 
