@@ -10,5 +10,5 @@ public interface ICharactorState
     // ステートから出る時に一度だけ実行される処理
     void Exit();
 
-    void OnControllerColliderHit(ControllerColliderHit hit) { }
+    void OnTriggerEnter(Collider other);
 }

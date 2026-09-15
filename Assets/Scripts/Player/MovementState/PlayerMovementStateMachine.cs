@@ -12,7 +12,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     //オブジェクト、クラスを参照
     private Animator animator;
-    public Vector3 playerDirection = Vector3.zero;
+    public Vector3 playerDirection;
     public CharacterController characterController;
     //プレイヤーモデルを取得
     public GameObject _playerObject;
@@ -20,7 +20,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     public float playerMoveSpeed;
     public float playerJumpPower;
 
-    public float gravity = 20.0f;//重力
+    public float gravity = -9.81f;//重力
 
     private void Awake()
     {
@@ -56,6 +56,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.Exit();
+            Debug.Log(currentState);
         }
 
         //新しいステートを取得
@@ -89,6 +90,11 @@ public class PlayerMovementStateMachine : MonoBehaviour
         else if (_playerInput._inputMove.x > 0)
             _playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
 
+        playerDirection.y += gravity * Time.deltaTime; //重力
+        if (characterController.isGrounded && playerDirection.y < 0)
+            playerDirection.y = -1;
+
         characterController.Move(moveVelocity * Time.deltaTime);
+
     }
 }

@@ -30,5 +30,5 @@ public abstract class PlayerStateBase : ICharactorState
     public abstract void Exit();
 
     //仮想メソッドを用意し、必要なステートだけにオーバーライドする
-    public virtual void OnControllerColliderHit(ControllerColliderHit hit) { } 
+    public virtual void OnTriggerEnter(Collider other) { } 
 }

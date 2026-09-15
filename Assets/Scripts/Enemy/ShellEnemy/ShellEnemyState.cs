@@ -51,7 +51,6 @@ public class ShellEnemyState : EnemyBase
         if (states.TryGetValue(newStateType, out ICharactorState newState))
         {
             currentState = newState;
-            Debug.Log(currentState);
             //新しいステートのEnterを呼び出す
             currentState.Enter();
         }

@@ -15,7 +15,7 @@ public class NormalState : PlayerStateBase
     // Update is called once per frame
     public override void Update()
     {
-        
+       
     }
 
     public override void Exit()
@@ -23,9 +23,9 @@ public class NormalState : PlayerStateBase
         
     }
 
-    public override void OnControllerColliderHit(ControllerColliderHit hit)
+    public override void OnTriggerEnter(Collider other)
     {
-        if (hit.gameObject.tag != "Enemy") return;//“G‚É“–‚½‚Á‚½‚ç
+        if (other.gameObject.tag != "Enemy") return;//“G‚É“–‚½‚Á‚½‚ç
         damageStateMachine.PlayerHP--;//HP‚ðŒ¸‚ç‚·
         Debug.Log(damageStateMachine.PlayerHP);
         if (damageStateMachine.PlayerHP <= 0)

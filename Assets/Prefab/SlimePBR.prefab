@@ -264,7 +264,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.59
-  m_Center: {x: 0, y: 0.54, z: 0}
+  m_Center: {x: 0, y: 0.57, z: 0}
 --- !u!114 &2297406848816299864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlimeEnemy
   moveSpeed: 1
   rayDistance: 1
-  firePosition: {fileID: 1557508570109623499}
+  rayHeight: 0
 --- !u!1 &3701797338893154743
 GameObject:
   m_ObjectHideFlags: 0

@@ -61,10 +61,13 @@ public class PlayerDamageStateMachine : MonoBehaviour
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)//当たり判定
+    
+
+    private void OnTriggerEnter(Collider other)
     {
-        currentState.OnControllerColliderHit(hit);
+        currentState.OnTriggerEnter(other);
     }
+    
 
     public int PlayerHP { get { return playerHP; } set { playerHP = Mathf.Max(0, value); } }//プレイヤーの体力のプロパティ
     public Renderer[] renderer {  get { return renderers; }  set { renderers = value; } }//レンダーのプロパティ
