@@ -82,12 +82,12 @@ public class PlayerMovementStateMachine : MonoBehaviour
     public void PlayerMove()
     {
         //“ü—Í‚É‰‚¶‚ÄˆÚ“®
-        var moveVelocity = new Vector3(_playerInput._inputMove.x * playerMoveSpeed, playerDirection.y, 0);
+        var moveVelocity = new Vector3(_playerInput.inputMove.x * playerMoveSpeed, playerDirection.y, 0);
 
         //“ü—Í‚É‰‚¶‚ÄŒü‚«‚ğ•Ï‚¦‚é
-        if (_playerInput._inputMove.x < 0)
+        if (_playerInput.inputMove.x < 0)
             _playerObject.transform.eulerAngles = new Vector3(0, -90, 0);
-        else if (_playerInput._inputMove.x > 0)
+        else if (_playerInput.inputMove.x > 0)
             _playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
 
         //playerDirection.y += gravity * Time.deltaTime; //d—Í

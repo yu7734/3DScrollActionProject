@@ -6,7 +6,7 @@ public class PlayerInputScript: MonoBehaviour
     private InputSystem_Actions inputActions;
     //ステートマシンスクリプト
     private PlayerMovementStateMachine _playerMovementStateMachine;
-    public Vector2 _inputMove = Vector2.zero;
+    private Vector2 _inputMove = Vector2.zero;
 
     private void Awake()
     {
@@ -51,11 +51,6 @@ public class PlayerInputScript: MonoBehaviour
     //移動イベント
     private void OnMove(InputAction.CallbackContext context)
     {
-        //if (context.started)
-        //{
-            
-        //}
-
         if (context.performed)
         {
             //移動ステートに入る
@@ -75,10 +70,6 @@ public class PlayerInputScript: MonoBehaviour
     //攻撃イベント
     private void OnAttack(InputAction.CallbackContext context)
     {
-        //if (context.started)
-        //{
-
-        //}
 
         if (context.performed)
         {
@@ -107,4 +98,6 @@ public class PlayerInputScript: MonoBehaviour
 
         }
     }
+
+    public Vector2 inputMove { get { return _inputMove; } set { _inputMove = value; } } 
 }

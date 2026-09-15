@@ -20,6 +20,9 @@ public class PlayerFallState : PlayerStateBase
 
         //地面に着いたら待機ステートに遷移
         if (!stateMachine.characterController.isGrounded) return;
+        if (stateMachine._playerInput.inputMove.x != 0)
+            stateMachine.SwicthState(typeof(PlayerMoveState));
+        else
             stateMachine.SwicthState(typeof(PlayerIdleState));
     }
 
