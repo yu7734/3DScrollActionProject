@@ -1,33 +1,35 @@
+using NUnit.Framework.Internal.Filters;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerDamageStateMachine : MonoBehaviour
+public class ShellEnemyState : EnemyBase
 {
+    [SerializeField] private Transform idlePoint; //待機ポイントの座標
+    [SerializeField] private SightCheckerManager sightChecker;//視界クラス
+
+    RaycastHit hit;
+
     //現在のステート
     private ICharactorState currentState;
 
     //全てのステートを保持するディクショナリ
     Dictionary<System.Type, ICharactorState> states;
 
-    [SerializeField] private int playerHP;
-    private Renderer[] renderers;
-    private CharacterController characterController;
-
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         //ステートのインスタンス化
         states = new Dictionary<System.Type, ICharactorState>()
         {
-            {typeof(NormalState), new NormalState(this) },
-            {typeof(DamagedState), new DamagedState(this) },
-            {typeof(DeadState), new DeadState(this) }
+            { typeof(ShellEnemyIdleState), new ShellEnemyIdleState(this)},
+            { typeof(ShellEnemyChaseState), new ShellEnemyChaseState(this)},
+            { typeof(ShellEnemyBackState), new ShellEnemyBackState(this)},
+            { typeof(ShellEnemyAttackState), new ShellEnemyAttackState(this)},
         };
 
-        renderers = GetComponentsInChildren<Renderer>();//子オブジェクトのレンダーを取得
-        characterController = GetComponentInChildren<CharacterController>();
-
         //初期ステートの設定
-        SwicthState(typeof(NormalState));
+        SwicthState(typeof(ShellEnemyIdleState));
     }
 
     // Update is called once per frame
@@ -35,8 +37,6 @@ public class PlayerDamageStateMachine : MonoBehaviour
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
-        //Debug.Log(currentState);
-        
     }
 
     public void SwicthState(System.Type newStateType)
@@ -61,15 +61,11 @@ public class PlayerDamageStateMachine : MonoBehaviour
         }
     }
 
-    
-
-    private void OnTriggerEnter(Collider other)
+    public void AnimaChange(string animationClip, bool isAnima)//ステートクラスでアニメーションを変える関数
     {
-        currentState.OnTriggerEnter(other);
+        animator.SetBool(animationClip, isAnima);
     }
-    
 
-    public int PlayerHP { get { return playerHP; } set { playerHP = Mathf.Max(0, value); } }//プレイヤーの体力のプロパティ
-    public Renderer[] renderer {  get { return renderers; }  set { renderers = value; } }//レンダーのプロパティ
-    public CharacterController CharacterController { get { return characterController; } }//キャラクターコントローラーのプロパティ
+    public Transform idlePointTransform { get { return idlePoint; } set {  idlePoint = value; }  }
+    public SightCheckerManager sightCheckerManager { get { return sightChecker; } set { sightChecker = value; } }
 }

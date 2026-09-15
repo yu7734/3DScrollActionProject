@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IPlayerState
+public interface ICharactorState
 {
     //ステートに入った時実行される関数
     void Enter();
@@ -10,5 +10,5 @@ public interface IPlayerState
     // ステートから出る時に一度だけ実行される処理
     void Exit();
 
-    void OnControllerColliderHit(ControllerColliderHit hit) { }
+    void OnTriggerEnter(Collider other);
 }

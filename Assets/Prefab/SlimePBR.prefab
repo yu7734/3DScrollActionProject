@@ -171,7 +171,6 @@ GameObject:
   - component: {fileID: 6650923269205383391}
   - component: {fileID: 912406214280728472}
   - component: {fileID: 2297406848816299864}
-  - component: {fileID: 1761837322293944876}
   m_Layer: 7
   m_Name: SlimePBR
   m_TagString: Enemy
@@ -206,7 +205,7 @@ Animator:
   m_GameObject: {fileID: 2570088024238667641}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6520c6d7889f4c72b416f07f34edd515, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9bbcf96c9a254c5ba654027c656d7b39, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9723650cbe0b39b4e96979a0ae13a31c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -265,7 +264,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.59
-  m_Center: {x: 0, y: 0.54, z: 0}
+  m_Center: {x: 0, y: 0.57, z: 0}
 --- !u!114 &2297406848816299864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,22 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SlimeEnemy
   moveSpeed: 1
   rayDistance: 1
---- !u!114 &1761837322293944876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2570088024238667641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6973b354175d7894c8681b5a4388086a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SightCheckerManager
-  _self: {fileID: 1557508570109623499}
-  _target: {fileID: 0}
-  _sightAngle: 20
-  _maxDistance: 5
+  rayHeight: 0
 --- !u!1 &3701797338893154743
 GameObject:
   m_ObjectHideFlags: 0

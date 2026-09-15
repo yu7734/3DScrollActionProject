@@ -5,14 +5,14 @@ public class PlayerMovementStateMachine : MonoBehaviour
 {
 
     //現在のステート
-    private IPlayerState currentState;
+    private ICharactorState currentState;
 
     //全てのステートを保持するディクショナリ
-    Dictionary<System.Type, IPlayerState> states;
+    Dictionary<System.Type, ICharactorState> states;
 
     //オブジェクト、クラスを参照
     private Animator animator;
-    public Vector3 playerDirection = Vector3.zero;
+    public Vector3 playerDirection;
     public CharacterController characterController;
     //プレイヤーモデルを取得
     public GameObject _playerObject;
@@ -20,13 +20,13 @@ public class PlayerMovementStateMachine : MonoBehaviour
     public float playerMoveSpeed;
     public float playerJumpPower;
 
-    public float gravity = 20.0f;//重力
+    public float gravity = -9.81f;//重力
 
     private void Awake()
     {
         //_playerObject = GetComponentInChildren<GameObject>();
         //ステートのインスタンス化
-        states = new Dictionary<System.Type, IPlayerState>()
+        states = new Dictionary<System.Type, ICharactorState>()
         {
             {typeof(PlayerIdleState),   new PlayerIdleState(this) },
             {typeof(PlayerMoveState),   new PlayerMoveState(this) },
@@ -56,10 +56,11 @@ public class PlayerMovementStateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.Exit();
+            Debug.Log(currentState);
         }
 
         //新しいステートを取得
-        if (states.TryGetValue(newStateType, out IPlayerState newState))
+        if (states.TryGetValue(newStateType, out ICharactorState newState))
         {
             currentState = newState;
             //新しいステートのEnterを呼び出す
@@ -81,14 +82,19 @@ public class PlayerMovementStateMachine : MonoBehaviour
     public void PlayerMove()
     {
         //入力に応じて移動
-        var moveVelocity = new Vector3(_playerInput._inputMove.x * playerMoveSpeed, playerDirection.y, 0);
+        var moveVelocity = new Vector3(_playerInput.inputMove.x * playerMoveSpeed, playerDirection.y, 0);
 
         //入力に応じて向きを変える
-        if (_playerInput._inputMove.x < 0)
+        if (_playerInput.inputMove.x < 0)
             _playerObject.transform.eulerAngles = new Vector3(0, -90, 0);
-        else if (_playerInput._inputMove.x > 0)
+        else if (_playerInput.inputMove.x > 0)
             _playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
 
+        //playerDirection.y += gravity * Time.deltaTime; //重力
+        if (characterController.isGrounded && playerDirection.y < 0)
+            playerDirection.y = -1;
+
         characterController.Move(moveVelocity * Time.deltaTime);
+
     }
 }

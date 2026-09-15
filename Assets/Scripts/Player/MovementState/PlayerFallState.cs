@@ -15,11 +15,14 @@ public class PlayerFallState : PlayerStateBase
     {
         //重力で落下
         //落下中でも移動出来るように
-        stateMachine.playerDirection.y -= stateMachine.gravity * Time.deltaTime;
+        stateMachine.playerDirection.y += stateMachine.gravity * Time.deltaTime;
         stateMachine.PlayerMove();
 
         //地面に着いたら待機ステートに遷移
         if (!stateMachine.characterController.isGrounded) return;
+        if (stateMachine._playerInput.inputMove.x != 0)
+            stateMachine.SwicthState(typeof(PlayerMoveState));
+        else
             stateMachine.SwicthState(typeof(PlayerIdleState));
     }
 
