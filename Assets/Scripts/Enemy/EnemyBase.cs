@@ -49,7 +49,6 @@ public class EnemyBase : MonoBehaviour
         Debug.DrawRay(rayOrigin, MoveDirection * rayDistance, Color.red);
         if (!Physics.Raycast(rayOrigin, moveDirection, out hit, rayDistance)) return;
         if (!(hit.transform.tag == hitObject)) return;
-        Debug.Log("ƒqƒbƒg");
         hitRay();
     }
 
