@@ -55,7 +55,7 @@ public class PlayerInputScript: MonoBehaviour
         {
             //移動ステートに入る
             _inputMove = context.ReadValue<Vector2>();
-            if (_playerMovementStateMachine.characterController.isGrounded)
+            if (_playerMovementStateMachine.GetCharacterController.isGrounded)
                 _playerMovementStateMachine.SwicthState(typeof(PlayerMoveState));
         }
 
@@ -74,7 +74,7 @@ public class PlayerInputScript: MonoBehaviour
         if (context.performed)
         {
             //攻撃ステートに入る
-            if (_playerMovementStateMachine.characterController.isGrounded)
+            if (_playerMovementStateMachine.GetCharacterController.isGrounded)
                 _playerMovementStateMachine.SwicthState(typeof(PlayerAttackState));
         }
 
@@ -89,7 +89,7 @@ public class PlayerInputScript: MonoBehaviour
     {
         if (context.started)
         {
-            if (_playerMovementStateMachine.characterController.isGrounded)
+            if (_playerMovementStateMachine.GetCharacterController.isGrounded)
                 _playerMovementStateMachine.SwicthState(typeof(PlayerJumpState));
         }
 

@@ -13,7 +13,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     //オブジェクト、クラスを参照
     private Animator animator;
     public Vector3 playerDirection;
-    public CharacterController characterController;
+    private CharacterController characterController;
     //プレイヤーモデルを取得
     public GameObject _playerObject;
     public PlayerInputScript _playerInput;
@@ -56,7 +56,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.Exit();
-            Debug.Log(currentState);
+            //Debug.Log(currentState);
         }
 
         //新しいステートを取得
@@ -94,7 +94,10 @@ public class PlayerMovementStateMachine : MonoBehaviour
         if (characterController.isGrounded && playerDirection.y < 0)
             playerDirection.y = -1;
 
+        //Debug.Log(characterController.isGrounded);
         characterController.Move(moveVelocity * Time.deltaTime);
 
     }
+
+    public CharacterController GetCharacterController {  get { return characterController; } }
 }

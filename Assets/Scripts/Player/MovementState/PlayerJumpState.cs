@@ -17,7 +17,7 @@ public class PlayerJumpState : PlayerStateBase
         //ƒWƒƒƒ“ƒv’†‚Å‚àˆÚ“®
         stateMachine.PlayerMove();
 
-        if (stateMachine.characterController.isGrounded)
+        if (stateMachine.GetCharacterController.isGrounded)
             stateMachine.SwicthState(typeof(PlayerIdleState));
     }
 
@@ -28,7 +28,7 @@ public class PlayerJumpState : PlayerStateBase
 
     private void Jump()
     {
-        stateMachine.playerDirection.y = Mathf.Sqrt(stateMachine.playerJumpPower * -2 * stateMachine.gravity);
+        stateMachine.playerDirection.y = Mathf.Sqrt(stateMachine.playerJumpPower * -1 * stateMachine.gravity);
         //stateMachine.characterController.Move(stateMachine.playerDirection);
     }
 }
