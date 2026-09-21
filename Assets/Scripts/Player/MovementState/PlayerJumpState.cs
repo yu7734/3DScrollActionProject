@@ -17,7 +17,11 @@ public class PlayerJumpState : PlayerStateBase
         //ジャンプ中でも移動
         stateMachine.PlayerMove();
 
-        if (stateMachine.GetCharacterController.isGrounded)
+        //地面に着いたら待機ステートに遷移
+        if (!stateMachine.GetCharacterController.isGrounded) return;
+        if (stateMachine._playerInput.inputMove.x != 0)
+            stateMachine.SwicthState(typeof(PlayerMoveState));
+        else
             stateMachine.SwicthState(typeof(PlayerIdleState));
     }
 

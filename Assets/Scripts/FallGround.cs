@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class FallGround : MonoBehaviour
 {
-    [SerializeField] private PlayerMovementStateMachine player;
     [SerializeField] private float fallSpeed;
     Rigidbody rigidbody;
 
@@ -14,7 +13,7 @@ public class FallGround : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rigidbody.isKinematic = true;
     }
 
     // Update is called once per frame
@@ -23,9 +22,9 @@ public class FallGround : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-            rigidbody.useGravity = true;
+        if (!other.CompareTag("Player")) return;
+        rigidbody.isKinematic = false;
     }
 }
