@@ -22,6 +22,9 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     public float gravity = -9.81f;//重力
 
+    [SerializeField] private FallGround fallGround;
+    private bool isFallFloor;
+
     private void Awake()
     {
         //_playerObject = GetComponentInChildren<GameObject>();
@@ -47,7 +50,6 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
-        //Debug.Log(currentState);
     }
 
     public void SwicthState(System.Type newStateType)
@@ -94,9 +96,22 @@ public class PlayerMovementStateMachine : MonoBehaviour
         if (characterController.isGrounded && playerDirection.y < 0)
             playerDirection.y = -1;
 
-        //Debug.Log(characterController.isGrounded);
-        characterController.Move(moveVelocity * Time.deltaTime);
+        //床の移動量
+        Vector3 floorMovement = Vector3.zero;
+        if (fallGround != null)
+            floorMovement = fallGround.DeltaPosition;//床の移動量を取得
 
+            characterController.Move(moveVelocity * Time.deltaTime + floorMovement);
+
+
+    }
+
+    //CharactorControllerが何かにぶつかった時
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        FallGround floor = hit.collider.GetComponent<FallGround>();
+        if (floor != null && hit.normal.y > 0.5f)
+            fallGround = floor;
     }
 
     public CharacterController GetCharacterController {  get { return characterController; } }

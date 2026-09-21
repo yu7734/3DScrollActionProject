@@ -5,7 +5,12 @@ using UnityEngine;
 public class FallGround : MonoBehaviour
 {
     [SerializeField] private float fallSpeed;
+    private bool isFall;
     Rigidbody rigidbody;
+
+    //床が移動した距離
+    public Vector3 DeltaPosition { get; private set; }
+    private Vector3 PreviousPosition;
 
     private void Awake()
     {
@@ -14,13 +19,18 @@ public class FallGround : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rigidbody.isKinematic = true;
+        PreviousPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isFall)
+            transform.Translate(new Vector3(0, -fallSpeed, 0) * Time.deltaTime);
+
+        //床の移動量を取得
+        DeltaPosition = transform.position - PreviousPosition;
+        PreviousPosition = transform.position;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,11 +43,12 @@ public class FallGround : MonoBehaviour
     {
         //1秒待ってから落下
         await UniTask.Delay(TimeSpan.FromSeconds(1));
-        if (rigidbody != null)
-            rigidbody.isKinematic = false;
+        isFall = true;
 
         //３秒経ったらオブジェクト削除
         await UniTask.Delay(TimeSpan.FromSeconds(3));
         Destroy(this.gameObject);
     }
+
+    public float GetFallSpeed { get { return fallSpeed; } }
 }
