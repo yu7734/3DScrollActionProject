@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 27
+  controlID: 158
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 52
+  controlID: 81
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -1339,9 +1339,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 153.48422, y: 11.703964, z: -0.06265086}
+    m_Target: {x: 91.33791, y: 9.654536, z: 0.09221831}
     speed: 2
-    m_Value: {x: 153.48422, y: 11.703964, z: -0.06265086}
+    m_Value: {x: 91.33791, y: 9.654536, z: 0.09221831}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1391,9 +1391,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
-    m_Target: 1.3765224
+    m_Target: 0.77985483
     speed: 2
-    m_Value: 1.3765224
+    m_Value: 0.77985483
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1706,43 +1706,9 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -207320
-      - m_Data: -207292
-      - m_Data: -207288
-      - m_Data: -207284
-      - m_Data: -207276
-      - m_Data: -207204
-      - m_Data: -207200
-      - m_Data: -207196
-      - m_Data: -207192
-      - m_Data: -207188
-      - m_Data: -207034
-      - m_Data: -193356
-      - m_Data: -193328
-      - m_Data: -193324
-      - m_Data: -193320
-      - m_Data: -193312
-      - m_Data: -193240
-      - m_Data: -193236
-      - m_Data: -193232
-      - m_Data: -193228
-      - m_Data: -193224
-      - m_Data: -192954
-      - m_Data: -3618
-      - m_Data: -3090
       - m_Data: -1302
-      - m_Data: 51084
-      - m_Data: 51132
-      - m_Data: 51234
-      - m_Data: 51330
-      - m_Data: 51572
-      - m_Data: 199626
-      - m_Data: 199776
-      - m_Data: 199872
-      - m_Data: 213278
-      - m_Data: 213428
-      - m_Data: 213438
-      - m_Data: 213760
+      - m_Data: 49146
+      - m_Data: 49156
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1855,7 +1821,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player/DamageState
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1865,7 +1831,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Player/DamageState
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ike2yu\Documents\GitHub\3DScrollActionProject
   m_LockTracker:
@@ -1874,15 +1840,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 50950
+    - m_Data: 50576
     m_LastClickedID:
-      m_Data: 50950
+      m_Data: 50576
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50576
-    - m_Data: 50578
-    - m_Data: 50580
-    - m_Data: 50582
+    - m_Data: 51200
+    - m_Data: 51202
+    - m_Data: 51204
+    - m_Data: 51206
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1915,10 +1881,10 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 50576
-    - m_Data: 50578
-    - m_Data: 50580
-    - m_Data: 50582
+    - m_Data: 51200
+    - m_Data: 51202
+    - m_Data: 51204
+    - m_Data: 51206
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1945,8 +1911,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs:
+    - m_Data: 48996
+    m_LastClickedInstanceID: 48996
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 46478
@@ -2026,7 +1993,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 336
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
