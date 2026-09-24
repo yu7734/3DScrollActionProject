@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Player\DamageState\DeadState.cs" />
     <Compile Include="Assets\Scripts\SightCheckerManager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\DamagedState.cs" />
+    <Compile Include="Assets\Scripts\ReSpornFallFloor.cs" />
     <Compile Include="Assets\Scripts\Player\IPlayerState.cs" />
     <Compile Include="Assets\Scripts\DamageInterface.cs" />
     <Compile Include="Assets\InputSystem_Actions.cs" />

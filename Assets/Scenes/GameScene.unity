@@ -297,6 +297,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &64185148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+  m_PrefabInstance: {fileID: 5633753798019541508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &81901960
 Mesh:
   m_ObjectHideFlags: 0
@@ -1899,6 +1904,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 802001236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &295710312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295710313}
+  - component: {fileID: 295710314}
+  m_Layer: 0
+  m_Name: ReSpornFloor (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295710313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295710312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -26.946167, y: -3.4540396, z: -0.29848593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 581308950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295710314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295710312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b326f0758e4de2247a18dc8ef71f8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
+  fallFloor: {fileID: 1960794041}
 --- !u!43 &303181430
 Mesh:
   m_ObjectHideFlags: 0
@@ -4467,6 +4517,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
   m_PrefabInstance: {fileID: 934552233}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &502175895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502175896}
+  - component: {fileID: 502175897}
+  m_Layer: 0
+  m_Name: ReSpornFloor (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &502175896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502175895}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.536163, y: -3.4540396, z: -0.29848593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 581308950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &502175897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502175895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b326f0758e4de2247a18dc8ef71f8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
+  fallFloor: {fileID: 1439701385}
 --- !u!1 &525981430
 GameObject:
   m_ObjectHideFlags: 0
@@ -5032,6 +5127,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &555097667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+  m_PrefabInstance: {fileID: 2101248319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &577245142
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,6 +5526,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681ffcc25df0f604784e43a4dc8ba7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeaponAttack
+--- !u!1 &581308949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 581308950}
+  m_Layer: 0
+  m_Name: FallFloors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &581308950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581308949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 112.19616, y: 12.16404, z: 0.09222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1948405803}
+  - {fileID: 1292621453}
+  - {fileID: 2101248320}
+  - {fileID: 1452042208}
+  - {fileID: 1885660974}
+  - {fileID: 1219433802}
+  - {fileID: 825447749}
+  - {fileID: 1973978364}
+  - {fileID: 295710313}
+  - {fileID: 2019769300}
+  - {fileID: 1788840071}
+  - {fileID: 655442162}
+  - {fileID: 502175896}
+  - {fileID: 1365795031}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &638888178
 Mesh:
   m_ObjectHideFlags: 0
@@ -5782,6 +5927,51 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &655442161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 655442162}
+  - component: {fileID: 655442163}
+  m_Layer: 0
+  m_Name: ReSpornFloor (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &655442162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655442161}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.536163, y: -3.4540396, z: -0.29848593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 581308950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &655442163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655442161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b326f0758e4de2247a18dc8ef71f8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
+  fallFloor: {fileID: 1521854927}
 --- !u!1 &656878761
 GameObject:
   m_ObjectHideFlags: 0
@@ -6961,13 +7151,6 @@ Transform:
   - {fileID: 2143949924}
   - {fileID: 1120399067}
   - {fileID: 577245148}
-  - {fileID: 1948405803}
-  - {fileID: 1292621453}
-  - {fileID: 2101248320}
-  - {fileID: 1452042208}
-  - {fileID: 1885660974}
-  - {fileID: 1219433802}
-  - {fileID: 825447749}
   - {fileID: 1360423439}
   - {fileID: 1893831686}
   - {fileID: 292085269}
@@ -6987,7 +7170,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 802001236}
+    m_TransformParent: {fileID: 581308950}
     m_Modifications:
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
@@ -6997,25 +7180,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 797320079}
+    - target: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: reSpornFallFloor
+      value: 
+      objectReference: {fileID: 1365795032}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 797320079}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_VersionIndex
-      value: 15153
+      value: 15156
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -81.78924
+      value: 5.0138397
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.24017
+      value: -1.26404
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13702592
+      value: -0.29848593
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9282,6 +9469,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59536274fa2adbd42a6c663aaf3d0628, type: 3}
+--- !u!1 &960392488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+  m_PrefabInstance: {fileID: 825447748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &963620517
 Mesh:
   m_ObjectHideFlags: 0
@@ -12154,7 +12346,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 802001236}
+    m_TransformParent: {fileID: 581308950}
     m_Modifications:
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
@@ -12164,25 +12356,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 641230905}
+    - target: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: reSpornFallFloor
+      value: 
+      objectReference: {fileID: 502175897}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 641230905}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_VersionIndex
-      value: 15153
+      value: 15156
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -88.18924
+      value: -1.3861618
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.24017
+      value: -1.26404
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13702592
+      value: -0.29848593
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12584,7 +12780,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 802001236}
+    m_TransformParent: {fileID: 581308950}
     m_Modifications:
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
@@ -12594,25 +12790,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1551065105}
+    - target: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: reSpornFallFloor
+      value: 
+      objectReference: {fileID: 295710314}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1551065105}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_VersionIndex
-      value: 15153
+      value: 15156
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -113.749245
+      value: -26.946167
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.430169
+      value: -3.4540396
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13702592
+      value: -0.29848593
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13008,6 +13208,51 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1365795030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1365795031}
+  - component: {fileID: 1365795032}
+  m_Layer: 0
+  m_Name: ReSpornFloor (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1365795031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365795030}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.536163, y: -3.4540396, z: -0.29848593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 581308950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365795032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365795030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b326f0758e4de2247a18dc8ef71f8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
+  fallFloor: {fileID: 960392488}
 --- !u!43 &1402906440
 Mesh:
   m_ObjectHideFlags: 0
@@ -13456,6 +13701,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1439701385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+  m_PrefabInstance: {fileID: 1219433801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1446229729
 GameObject:
   m_ObjectHideFlags: 0
@@ -13589,7 +13839,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 802001236}
+    m_TransformParent: {fileID: 581308950}
     m_Modifications:
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
@@ -13599,25 +13849,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 669744012}
+    - target: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: reSpornFallFloor
+      value: 
+      objectReference: {fileID: 1788840072}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 669744012}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_VersionIndex
-      value: 15153
+      value: 15156
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -101.63924
+      value: -14.836159
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.340169
+      value: -1.3640394
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13702592
+      value: -0.29848593
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14369,6 +14623,11 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1521854927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+  m_PrefabInstance: {fileID: 1885660973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1535161843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16207,6 +16466,56 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
+--- !u!1 &1788840070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1788840071}
+  - component: {fileID: 1788840072}
+  m_Layer: 0
+  m_Name: ReSpornFloor (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1788840071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788840070}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.536163, y: -3.4540396, z: -0.29848593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 581308950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1788840072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788840070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b326f0758e4de2247a18dc8ef71f8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
+  fallFloor: {fileID: 1804302647}
+--- !u!1 &1804302647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+  m_PrefabInstance: {fileID: 1452042207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1836868572
 GameObject:
   m_ObjectHideFlags: 0
@@ -16664,7 +16973,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 802001236}
+    m_TransformParent: {fileID: 581308950}
     m_Modifications:
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
@@ -16674,25 +16983,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 898921924}
+    - target: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: reSpornFallFloor
+      value: 
+      objectReference: {fileID: 655442163}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 898921924}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_VersionIndex
-      value: 15153
+      value: 15156
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -94.78924
+      value: -7.9861603
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.340169
+      value: -1.3640394
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13702592
+      value: -0.29848593
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17276,12 +17589,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
   m_PrefabInstance: {fileID: 5633753798019541508}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 64185148}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d216f2e0a8cea94cbaee835dcd5946d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallGround
+--- !u!1 &1960794041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+  m_PrefabInstance: {fileID: 1292621452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1970057830
 Mesh:
   m_ObjectHideFlags: 0
@@ -17587,6 +17905,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c744838ca9ae0b74388ba66c7c45e3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalManager
+--- !u!1 &1973978362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1973978364}
+  - component: {fileID: 1973978363}
+  m_Layer: 0
+  m_Name: ReSpornFloor
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1973978363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973978362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b326f0758e4de2247a18dc8ef71f8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
+  fallFloor: {fileID: 64185148}
+--- !u!4 &1973978364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973978362}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -32.41617, y: -3.4540396, z: -0.29848593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 581308950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2019769299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019769300}
+  - component: {fileID: 2019769301}
+  m_Layer: 0
+  m_Name: ReSpornFloor (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2019769300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019769299}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.536163, y: -3.4540396, z: -0.29848593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 581308950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2019769301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019769299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b326f0758e4de2247a18dc8ef71f8498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
+  fallFloor: {fileID: 555097667}
 --- !u!1 &2077198664
 GameObject:
   m_ObjectHideFlags: 0
@@ -17949,7 +18357,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 802001236}
+    m_TransformParent: {fileID: 581308950}
     m_Modifications:
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
@@ -17959,25 +18367,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 963620517}
+    - target: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: reSpornFallFloor
+      value: 
+      objectReference: {fileID: 2019769301}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 963620517}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_VersionIndex
-      value: 15153
+      value: 15156
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -108.33924
+      value: -21.536163
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.430169
+      value: -3.4540396
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13702592
+      value: -0.29848593
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18436,7 +18848,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 802001236}
+    m_TransformParent: {fileID: 581308950}
     m_Modifications:
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
@@ -18446,25 +18858,29 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 436276623}
+    - target: {fileID: 4171804706607788997, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: reSpornFallFloor
+      value: 
+      objectReference: {fileID: 1973978363}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 436276623}
     - target: {fileID: 5935025320881172566, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_VersionIndex
-      value: 15153
+      value: 15156
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -119.219246
+      value: -32.41617
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.430169
+      value: -3.4540396
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.13702592
+      value: -0.29848593
       objectReference: {fileID: 0}
     - target: {fileID: 7571604059341999274, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18512,6 +18928,7 @@ SceneRoots:
   - {fileID: 1972260826}
   - {fileID: 1431751439}
   - {fileID: 802001236}
+  - {fileID: 581308950}
   - {fileID: 1535161843}
   - {fileID: 444758549}
   - {fileID: 548253765}

@@ -22,8 +22,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     public float gravity = -9.81f;//重力
 
-    [SerializeField] private FallGround fallGround;
-    private bool isFallFloor;
+    private FallGround fallGround;
 
     private void Awake()
     {
@@ -50,6 +49,8 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
+
+        Debug.Log(fallGround);
     }
 
     public void SwicthState(System.Type newStateType)
@@ -92,7 +93,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
         else if (_playerInput.inputMove.x > 0)
             _playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
 
-        //playerDirection.y += gravity * Time.deltaTime; //重力
+        playerDirection.y += gravity * Time.deltaTime; //重力
         if (characterController.isGrounded && playerDirection.y < 0)
             playerDirection.y = -1;
 
@@ -115,4 +116,5 @@ public class PlayerMovementStateMachine : MonoBehaviour
     }
 
     public CharacterController GetCharacterController {  get { return characterController; } }
+    public FallGround GetSetFallGround {  get { return fallGround; }  set { fallGround = value; } }
 }

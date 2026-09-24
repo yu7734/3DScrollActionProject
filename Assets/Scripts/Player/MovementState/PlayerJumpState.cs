@@ -13,7 +13,7 @@ public class PlayerJumpState : PlayerStateBase
     public override void Update()
     {
         //d—Í
-        stateMachine.playerDirection.y += stateMachine.gravity * Time.deltaTime;
+        //stateMachine.playerDirection.y += stateMachine.gravity * Time.deltaTime;
         //ƒWƒƒƒ“ƒv’†‚Å‚àˆÚ“®
         stateMachine.PlayerMove();
 
@@ -33,6 +33,7 @@ public class PlayerJumpState : PlayerStateBase
     private void Jump()
     {
         stateMachine.playerDirection.y = Mathf.Sqrt(stateMachine.playerJumpPower * -1 * stateMachine.gravity);
+        stateMachine.GetSetFallGround = null;
         //stateMachine.characterController.Move(stateMachine.playerDirection);
     }
 }

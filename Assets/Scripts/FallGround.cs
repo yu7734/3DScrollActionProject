@@ -6,6 +6,7 @@ public class FallGround : MonoBehaviour
 {
     [SerializeField] private float fallSpeed;
     private bool isFall;
+    [SerializeField] private ReSpornFallFloor reSpornFallFloor;
     Rigidbody rigidbody;
 
     //床が移動した距離
@@ -47,7 +48,9 @@ public class FallGround : MonoBehaviour
 
         //３秒経ったらオブジェクト削除
         await UniTask.Delay(TimeSpan.FromSeconds(3));
-        Destroy(this.gameObject);
+        isFall = false;
+        reSpornFallFloor.GetIsDestroy = true;
+        this.gameObject.SetActive(false);
     }
 
     public float GetFallSpeed { get { return fallSpeed; } }
