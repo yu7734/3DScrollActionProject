@@ -16,7 +16,7 @@ public class PlayerMoveState : PlayerStateBase
         stateMachine.PlayerMove();
 
         //地面についていなかったら落下ステートに切り替え
-        if (!stateMachine.characterController.isGrounded)
+        if (!stateMachine.GetCharacterController.isGrounded)
             stateMachine.SwicthState(typeof(PlayerFallState));
     }
 

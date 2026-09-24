@@ -13,7 +13,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     //オブジェクト、クラスを参照
     private Animator animator;
     public Vector3 playerDirection;
-    public CharacterController characterController;
+    private CharacterController characterController;
     //プレイヤーモデルを取得
     public GameObject _playerObject;
     public PlayerInputScript _playerInput;
@@ -21,6 +21,8 @@ public class PlayerMovementStateMachine : MonoBehaviour
     public float playerJumpPower;
 
     public float gravity = -9.81f;//重力
+
+    private FallGround fallGround;
 
     private void Awake()
     {
@@ -47,7 +49,8 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         //現在のステートのUpdateを呼び出す
         currentState?.Update();
-        //Debug.Log(currentState);
+
+        Debug.Log(fallGround);
     }
 
     public void SwicthState(System.Type newStateType)
@@ -56,7 +59,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
         if (currentState != null)
         {
             currentState.Exit();
-            Debug.Log(currentState);
+            //Debug.Log(currentState);
         }
 
         //新しいステートを取得
@@ -90,11 +93,28 @@ public class PlayerMovementStateMachine : MonoBehaviour
         else if (_playerInput.inputMove.x > 0)
             _playerObject.transform.eulerAngles = new Vector3(0, 90, 0);
 
-        //playerDirection.y += gravity * Time.deltaTime; //重力
+        playerDirection.y += gravity * Time.deltaTime; //重力
         if (characterController.isGrounded && playerDirection.y < 0)
             playerDirection.y = -1;
 
-        characterController.Move(moveVelocity * Time.deltaTime);
+        //床の移動量
+        Vector3 floorMovement = Vector3.zero;
+        if (fallGround != null)
+            floorMovement = fallGround.DeltaPosition;//床の移動量を取得
+
+            characterController.Move(moveVelocity * Time.deltaTime + floorMovement);
+
 
     }
+
+    //CharactorControllerが何かにぶつかった時
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        FallGround floor = hit.collider.GetComponent<FallGround>();
+        if (floor != null && hit.normal.y > 0.5f)
+            fallGround = floor;
+    }
+
+    public CharacterController GetCharacterController {  get { return characterController; } }
+    public FallGround GetSetFallGround {  get { return fallGround; }  set { fallGround = value; } }
 }

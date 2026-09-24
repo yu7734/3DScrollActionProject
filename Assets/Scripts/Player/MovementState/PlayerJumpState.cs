@@ -6,19 +6,19 @@ public class PlayerJumpState : PlayerStateBase
 
     public override void Enter()
     {
-        //ƒWƒƒƒ“ƒvƒXƒe[ƒg‚É“ü‚Á‚½‚çƒWƒƒƒ“ƒv
+        //ã‚¸ãƒ£ãƒ³ãƒ—ã‚¹ãƒ†ãƒ¼ãƒˆã«å…¥ã£ãŸã‚‰ã‚¸ãƒ£ãƒ³ãƒ—
         Jump();
     }
 
     public override void Update()
     {
-        //d—Í
-        stateMachine.playerDirection.y += stateMachine.gravity * Time.deltaTime;
-        //ƒWƒƒƒ“ƒv’†‚Å‚àˆÚ“®
+        //é‡åŠ›
+        //stateMachine.playerDirection.y += stateMachine.gravity * Time.deltaTime;
+        //ã‚¸ãƒ£ãƒ³ãƒ—ä¸­ã§ã‚‚ç§»å‹•
         stateMachine.PlayerMove();
 
-        //’n–Ê‚É’…‚¢‚½‚ç‘Ò‹@ƒXƒe[ƒg‚É‘JˆÚ
-        if (!stateMachine.characterController.isGrounded) return;
+        //åœ°é¢ã«ç€ã„ãŸã‚‰å¾…æ©Ÿã‚¹ãƒ†ãƒ¼ãƒˆã«é·ç§»
+        if (!stateMachine.GetCharacterController.isGrounded) return;
         if (stateMachine._playerInput.inputMove.x != 0)
             stateMachine.SwicthState(typeof(PlayerMoveState));
         else
@@ -32,7 +32,8 @@ public class PlayerJumpState : PlayerStateBase
 
     private void Jump()
     {
-        stateMachine.playerDirection.y = Mathf.Sqrt(stateMachine.playerJumpPower * -2 * stateMachine.gravity);
+        stateMachine.playerDirection.y = Mathf.Sqrt(stateMachine.playerJumpPower * -1 * stateMachine.gravity);
+        stateMachine.GetSetFallGround = null;
         //stateMachine.characterController.Move(stateMachine.playerDirection);
     }
 }
