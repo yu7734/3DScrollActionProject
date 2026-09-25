@@ -53,6 +53,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerObject.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeEnemy.cs" />
+    <Compile Include="Assets\TestScripts\FallDieZone.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyState.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\NormalState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputScript.cs" />
