@@ -9,7 +9,12 @@ public class DeadState : PlayerStateBase
 
     public override void Enter()
     {
+        //プレイヤーを消し、ゲームオーバー
+        Debug.Log("ゲームオーバー");
         damageStateMachine.gameObject.SetActive(false);
+        damageStateMachine.GetSetGameManager.GetSetIsGameOver = true;
+        Debug.Log(damageStateMachine.GetSetGameManager.GetSetIsGameOver);
+        
     }
 
     // Update is called once per frame
