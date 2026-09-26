@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 159
+  controlID: 153
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -1339,9 +1339,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 3.3338358, y: -0.05203052, z: 10.043863}
+    m_Target: {x: 14.626184, y: 4.5218344, z: -20.811232}
     speed: 2
-    m_Value: {x: 3.3338358, y: -0.05203052, z: 10.043863}
+    m_Value: {x: 14.626184, y: 4.5218344, z: -20.811232}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1391,9 +1391,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.038989007, y: 0.0074942345, z: -0.00029242353, w: -0.9992115}
   m_Size:
-    m_Target: 25.65258
+    m_Target: 3.6637602
     speed: 2
-    m_Value: 25.65258
+    m_Value: 3.6637602
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1706,13 +1706,12 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -37102
-      - m_Data: -33300
-      - m_Data: -32386
-      - m_Data: -3224
+      - m_Data: -35682
+      - m_Data: -34740
+      - m_Data: -8924
+      - m_Data: -3164
       - m_Data: -1302
-      - m_Data: 51846
-      - m_Data: 69602
+      - m_Data: 83196
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1825,7 +1824,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Player/DamageState
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1835,7 +1834,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Player/DamageState
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ike2yu\Documents\GitHub\3DScrollActionProject
   m_LockTracker:
@@ -1844,15 +1843,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 51574
+    - m_Data: 54618
     m_LastClickedID:
-      m_Data: 51574
+      m_Data: 54618
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51226
-    - m_Data: 51228
-    - m_Data: 51230
-    - m_Data: 51232
+    - m_Data: 51564
+    - m_Data: 51566
+    - m_Data: 51568
+    - m_Data: 51570
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1885,10 +1884,10 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51226
-    - m_Data: 51228
-    - m_Data: 51230
-    - m_Data: 51232
+    - m_Data: 51564
+    - m_Data: 51566
+    - m_Data: 51568
+    - m_Data: 51570
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1916,8 +1915,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -37938
-    m_LastClickedInstanceID: -37938
+    - m_Data: 83498
+    m_LastClickedInstanceID: 83498
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 46478
