@@ -30,7 +30,7 @@ public class PlayerHP : MonoBehaviour
 
     private void ShowHPIcon()
     {
-        //HPが減ったら、
+        //HPが減ったら、HPアイコンを非アクティブ化
         if (beforeHP == player.PlayerHP) return;
 
         Image[] icons = transform.GetComponentsInChildren<Image>();
