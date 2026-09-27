@@ -4457,7 +4457,7 @@ Transform:
   m_GameObject: {fileID: 461312765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.2977, y: 10.916205, z: -142.44202}
+  m_LocalPosition: {x: 153.10419, y: 10.916205, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5067,7 +5067,7 @@ Transform:
   m_GameObject: {fileID: 548253764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 153.10419, y: 10.916205, z: 0.34220886}
+  m_LocalPosition: {x: 82.65579, y: 9.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5528,6 +5528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShellEnemy3
       objectReference: {fileID: 0}
+    - target: {fileID: 6924620331883163040, guid: 4fb56ac3f1e0a5940a6ff50358b6a138, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 367854021}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6567,7 +6571,7 @@ Transform:
   m_GameObject: {fileID: 676304057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -7.28}
+  m_LocalPosition: {x: 142.7, y: 10.9, z: -7.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12059,13 +12063,13 @@ Transform:
   - {fileID: 823602803606981901}
   - {fileID: 946267721}
   - {fileID: 1222887749}
-  - {fileID: 4544218958188463}
   - {fileID: 696393978}
-  - {fileID: 2079667142}
   - {fileID: 189142773}
-  - {fileID: 626591706}
   - {fileID: 27943421}
   - {fileID: 33433530}
+  - {fileID: 4544218958188463}
+  - {fileID: 2079667142}
+  - {fileID: 626591706}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1150149393
@@ -13157,7 +13161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7a1b203e8187249ad9275ccd9f3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStartManager
-  isStart: 1
+  isStart: 0
   player: {fileID: 367854021}
 --- !u!4 &1339108975
 Transform:
@@ -17267,7 +17271,7 @@ Transform:
   m_GameObject: {fileID: 1798172332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.2977, y: 10.916205, z: -142.44202}
+  m_LocalPosition: {x: 202.80998, y: 17.286203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18061,7 +18065,7 @@ Transform:
   m_GameObject: {fileID: 1857259737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -7.28}
+  m_LocalPosition: {x: 142.7, y: 10.9, z: -7.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19708,6 +19712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShellEnemy2
       objectReference: {fileID: 0}
+    - target: {fileID: 6924620331883163040, guid: 4fb56ac3f1e0a5940a6ff50358b6a138, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 367854021}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20256,15 +20264,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 142.7
       objectReference: {fileID: 0}
     - target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 9.9
       objectReference: {fileID: 0}
     - target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -20394,7 +20402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1961969022470058576, guid: 4fb56ac3f1e0a5940a6ff50358b6a138, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.076171875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1961969022470058576, guid: 4fb56ac3f1e0a5940a6ff50358b6a138, type: 3}
       propertyPath: m_LocalRotation.w
