@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallGround
   fallSpeed: 5
+  reSpornFallFloor: {fileID: 0}
 --- !u!54 &3049131034639134999
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -58,6 +58,8 @@
     <Compile Include="Assets\Scripts\Player\PlayerInputScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateBase.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerMoveState.cs" />
+    <Compile Include="Assets\Scripts\PlayerStartManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemySpawnManager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\DeadState.cs" />
     <Compile Include="Assets\Scripts\SightCheckerManager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\DamagedState.cs" />
