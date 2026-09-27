@@ -24,12 +24,6 @@ public class EnemyBase : MonoBehaviour
         moveDirection = Vector3.left;//Å‰‚Í¶Œü‚«
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Move()
     {
         rb.linearVelocity = new Vector3(moveSpeed * moveDirection.x, 0, 0);//Œü‚¢‚Ä‚¢‚éŒü‚«‚Ì•ûŒü‚Éi‚Ş
