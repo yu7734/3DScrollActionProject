@@ -2,26 +2,18 @@ using UnityEngine;
 
 public class GoalManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private GameManager gameManager;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))//プレイヤーに触れたらゴール
-            Goal();
+        //プレイヤーに触れたらゴール
+        if (!other.CompareTag("Player")) return;
+        Goal();
     }
 
     private void Goal()
     {
         Debug.Log("Goal");
+        gameManager.GetSetIsGameClear = true;
     }
 }

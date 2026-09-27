@@ -7432,6 +7432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   gameOverUI: {fileID: 1052490670}
+  gameClearUI: {fileID: 942839664}
 --- !u!4 &813421838
 Transform:
   m_ObjectHideFlags: 0
@@ -19001,6 +19002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c744838ca9ae0b74388ba66c7c45e3fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalManager
+  gameManager: {fileID: 813421837}
 --- !u!1 &1973978362
 GameObject:
   m_ObjectHideFlags: 0
