@@ -18,7 +18,9 @@ public class FallDieZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //触れたらHPを０にして、死亡ステートに変更し、ゲームオーバー
         if (!other.CompareTag("Player")) return;
+        playerDamage.PlayerHP = 0;
         playerDamage.SwicthState(typeof(DeadState));
     }
 }
