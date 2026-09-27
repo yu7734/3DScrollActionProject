@@ -10,4 +10,6 @@ public class PlayerStartManager : MonoBehaviour
         if (isStart)
             player.position = this.transform.position;
     }
+
+    public bool GetSetIsStart {  get { return isStart; }  set { isStart = value; } }
 }

@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SightCheckerManager
   _self: {fileID: 1961969022470058576}
-  _target: {fileID: 0}
+  _target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
   _sightAngle: 20
   _maxDistance: 8
 --- !u!114 &3525645309962203270

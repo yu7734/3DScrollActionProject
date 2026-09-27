@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         gameOverUI.SetActive(false);
         gameClearUI.SetActive(false);
+        PlayerStartManager playerStart = new PlayerStartManager();
+        playerStart.GetSetIsStart = true;
     }
 
     // Update is called once per frame
