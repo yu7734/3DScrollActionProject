@@ -61,6 +61,11 @@ public class ShellEnemyState : EnemyBase
         }
     }
 
+    private void OnDisable()
+    {
+        scoreManager.IncreaseScore(300);
+    }
+
     public void AnimaChange(string animationClip, bool isAnima)//ステートクラスでアニメーションを変える関数
     {
         animator.SetBool(animationClip, isAnima);
