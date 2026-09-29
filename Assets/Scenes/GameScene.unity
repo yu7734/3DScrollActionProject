@@ -7784,6 +7784,7 @@ GameObject:
   - component: {fileID: 813421838}
   - component: {fileID: 813421837}
   - component: {fileID: 813421839}
+  - component: {fileID: 813421840}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7833,6 +7834,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
   scoreText: {fileID: 78001812}
+--- !u!114 &813421840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813421836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397d4bc0295043b49a430f92b9ce2a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
+  playerDamage: {fileID: 367854029}
+  maxTime: 3
+  timeText: {fileID: 438873525}
 --- !u!1001 &825447748
 PrefabInstance:
   m_ObjectHideFlags: 0

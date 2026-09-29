@@ -63,11 +63,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyAttackState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerObject.cs" />
+    <Compile Include="Assets\Scripts\GameManager\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerIdleState.cs" />
-    <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeEnemy.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHP.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyState.cs" />
+    <Compile Include="Assets\Scripts\GameManager\TimeManager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\NormalState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateBase.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\Player\DamageState\DeadState.cs" />
     <Compile Include="Assets\Scripts\SightCheckerManager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\DamagedState.cs" />
+    <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\ReSpornFallFloor.cs" />
     <Compile Include="Assets\Scripts\Player\IPlayerState.cs" />
     <Compile Include="Assets\Scripts\DamageInterface.cs" />
@@ -89,7 +91,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerWeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\PlayerDamageStateMachine.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyBackState.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerFallState.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerMovementStateMachine.cs" />
     <Compile Include="Assets\Scripts\CameraManager.cs" />
