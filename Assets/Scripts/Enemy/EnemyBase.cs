@@ -11,7 +11,7 @@ public class EnemyBase : MonoBehaviour
     protected Animator animator;
     public delegate void HitRay(); //Ray‚ª“–‚½‚Á‚½‚Ìˆ—‚ğ‚·‚éƒfƒŠƒQ[ƒg‚ğéŒ¾
     public HitRay hitRay; //ŠÖ”‚ğ•Ï”‚É
-    protected bool isDead;
+    [SerializeField] protected ScoreManager scoreManager;
 
     protected virtual void Awake()
     {
@@ -48,5 +48,4 @@ public class EnemyBase : MonoBehaviour
     }
 
     public Vector3 MoveDirection { get { return moveDirection; } set { moveDirection = value; } }
-    public bool GetSetIsDead { get { return isDead; } set { isDead = value; } }
 }
