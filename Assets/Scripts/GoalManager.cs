@@ -3,6 +3,7 @@ using UnityEngine;
 public class GoalManager : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private TimeManager timeManager;
     private GameObject flagObject;
 
     private void Awake()
@@ -21,6 +22,7 @@ public class GoalManager : MonoBehaviour
     {
         Debug.Log("Goal");
         flagObject.SetActive(false);
+        timeManager.AddRemainingTimeToScore();//残り時間をスコアに追加
         gameManager.GetSetIsGameClear = true;
     }
 }

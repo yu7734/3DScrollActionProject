@@ -7847,8 +7847,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   playerDamage: {fileID: 367854029}
-  maxTime: 3
+  maxTime: 100
   timeText: {fileID: 438873525}
+  scoreManager: {fileID: 813421839}
 --- !u!1001 &825447748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19487,6 +19488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoalManager
   gameManager: {fileID: 813421837}
+  timeManager: {fileID: 813421840}
 --- !u!1 &1973978362
 GameObject:
   m_ObjectHideFlags: 0
