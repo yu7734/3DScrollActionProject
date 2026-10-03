@@ -8,6 +8,9 @@ public class FallGround : MonoBehaviour
     private bool isFall;
     [SerializeField] private ReSpornFallFloor reSpornFallFloor;
     Rigidbody rigidbody;
+    private Renderer renderer;
+    private Color startColor;
+
 
     //床が移動した距離
     public Vector3 DeltaPosition { get; private set; }
@@ -16,11 +19,14 @@ public class FallGround : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        renderer = GetComponent<Renderer>();
+        startColor = GetComponent<Renderer>().material.color;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         PreviousPosition = transform.position;
+        startColor = renderer.material.color;　//最初の色を取得
     }
 
     // Update is called once per frame
@@ -42,14 +48,16 @@ public class FallGround : MonoBehaviour
 
     async UniTask Fall()
     {
-        //1秒待ってから落下
+        //色を赤色に変更して1秒待ってから落下
+        renderer.material.color = Color.red;
         await UniTask.Delay(TimeSpan.FromSeconds(1));
         isFall = true;
 
-        //３秒経ったらオブジェクト削除
+        //３秒経ったら色を戻しオブジェクト削除
         await UniTask.Delay(TimeSpan.FromSeconds(3));
         isFall = false;
         reSpornFallFloor.GetIsDestroy = true;
+        renderer.material.color = startColor;
         this.gameObject.SetActive(false);
     }
 

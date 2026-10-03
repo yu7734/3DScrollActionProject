@@ -6963,7 +6963,7 @@ Transform:
   m_GameObject: {fileID: 676304057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -7.28}
+  m_LocalPosition: {x: 87.4, y: 9.5, z: -7.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13497,6 +13497,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1791485464}
     m_Modifications:
+    - target: {fileID: 2248642278797466381, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a558203040de0140b3489cffd041e9a, type: 2}
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
       value: Cube (15)
@@ -18512,7 +18516,7 @@ Transform:
   m_GameObject: {fileID: 1857259737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -7.28}
+  m_LocalPosition: {x: 87.4, y: 9.5, z: -7.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20198,6 +20202,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 878562920}
     m_Modifications:
+    - target: {fileID: 2248642278797466381, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a558203040de0140b3489cffd041e9a, type: 2}
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
       value: Cube (16)
@@ -20731,11 +20739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 87.4
       objectReference: {fileID: 0}
     - target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3694321555258033791, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20790,6 +20798,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1722424163}
     m_Modifications:
+    - target: {fileID: 2248642278797466381, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5a558203040de0140b3489cffd041e9a, type: 2}
     - target: {fileID: 2296186934351080909, guid: 7b2ac9fb8ce9bf24eab094874653f9f1, type: 3}
       propertyPath: m_Name
       value: Cube (14)
