@@ -52,6 +52,7 @@
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyAttackState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerObject.cs" />
     <Compile Include="Assets\Scripts\GameManager\ScoreManager.cs" />
+    <Compile Include="Assets\Matthew Guz\Slash Effects FREE\Scripts\CameraRotation.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeEnemy.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHP.cs" />
@@ -62,8 +63,10 @@
     <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStateBase.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerMoveState.cs" />
+    <Compile Include="Assets\Scripts\Player\EndAttackAnimation.cs" />
     <Compile Include="Assets\Scripts\PlayerStartManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemySpawnManager.cs" />
+    <Compile Include="Assets\Matthew Guz\Slash Effects FREE\Scripts\Prefab Manager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\DeadState.cs" />
     <Compile Include="Assets\Scripts\SightCheckerManager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\DamagedState.cs" />
@@ -94,6 +97,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\Matthew Guz\Slash Effects FREE\Documentation\Readme IMPORTANT.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />

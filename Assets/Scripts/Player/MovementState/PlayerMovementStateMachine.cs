@@ -24,6 +24,8 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     private FallGround fallGround;
 
+    private TrailRenderer trailRenderer;
+
     private void Awake()
     {
         //_playerObject = GetComponentInChildren<GameObject>();
@@ -42,6 +44,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        trailRenderer = GetComponentInChildren<TrailRenderer>();
     }
 
     // Update is called once per frame
@@ -115,4 +118,5 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     public CharacterController GetCharacterController {  get { return characterController; } }
     public FallGround GetSetFallGround {  get { return fallGround; }  set { fallGround = value; } }
+    public TrailRenderer GetSetTrailRenderer { get { return trailRenderer; } set { trailRenderer = value; } }
 }
