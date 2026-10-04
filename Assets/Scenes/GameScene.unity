@@ -4892,6 +4892,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReSpornFallFloor
   fallFloor: {fileID: 1439701385}
+--- !u!1 &515670951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3338293143786988618, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
+  m_PrefabInstance: {fileID: 2560887905674916022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &515670955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515670951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835b978e97510c647a39bcf8d92d68c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndAttackAnimation
+  moveStateMachine: {fileID: 1973245382}
 --- !u!1 &525981430
 GameObject:
   m_ObjectHideFlags: 0
@@ -19514,6 +19532,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GoalManager
   gameManager: {fileID: 813421837}
   timeManager: {fileID: 813421840}
+--- !u!114 &1973245382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7448593680753260876, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
+  m_PrefabInstance: {fileID: 2560887905674916022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c54540067838ce44a4fa8619673c001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
 --- !u!1 &1973978362
 GameObject:
   m_ObjectHideFlags: 0
@@ -19911,12 +19940,12 @@ TrailRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 0
-    textureScale: {x: 1, y: 2}
+    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
-  m_Emitting: 1
+  m_Emitting: 0
   m_ApplyActiveColorSpace: 1
 --- !u!1 &2077198664
 GameObject:
@@ -20954,7 +20983,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1356061340931490963, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2048074102}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3338293143786988618, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 515670955}
   m_SourcePrefab: {fileID: 100100000, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
 --- !u!1001 &5633753798019541508
 PrefabInstance:

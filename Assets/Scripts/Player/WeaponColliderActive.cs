@@ -4,12 +4,12 @@ public class WeaponColliderActive : MonoBehaviour
 {
     public Collider weaponCollider;
 
-    void OnWeapon()
+    private void OnWeapon()
     {
         weaponCollider.enabled = true;
     }
 
-    void OffWeapon()
+    private void OffWeapon()
     {
         weaponCollider.enabled = false;
     }
