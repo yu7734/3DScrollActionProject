@@ -76,7 +76,7 @@ public class SlidePanelManager : MonoBehaviour
         if (slideCount > slideTime + 0.5f)
         {
             slideMode = SlideMode.Close;
-            isSlide = true;
+            isSlide = false;
             slideCount = 0;
             slideComplete.Invoke();
         }
