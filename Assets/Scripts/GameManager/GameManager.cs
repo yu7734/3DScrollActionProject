@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour
 
     public void RetryBottom()
     {
+        slidePanelManager.StartSlide(ReLoadGame);//パネルをスライドさせてからロード
+    }
+
+    private void ReLoadGame()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -55,6 +60,7 @@ public class GameManager : MonoBehaviour
     {
         //プレイヤーが操作可能に
         player.GetComponent<PlayerInputScript>().enabled = true;
+        isGameStart = true;
     }
 
     public bool GetSetIsGameOver { get { return isGameOver; } set { isGameOver = value; } }
