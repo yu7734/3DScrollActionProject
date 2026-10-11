@@ -8,6 +8,7 @@ public class TitleManager : MonoBehaviour
 
     public void GameStart()
     {
+        SoundManager.Instance.PlaySE(SESoundData.SE.PushBottom);
         slidePanelManager.StartSlide(LoadGame);
     }
     private void LoadGame()
@@ -17,6 +18,7 @@ public class TitleManager : MonoBehaviour
 
     public void GameQuit()
     {
+        SoundManager.Instance.PlaySE(SESoundData.SE.PushBottom);
         Application.Quit();
     }
 }

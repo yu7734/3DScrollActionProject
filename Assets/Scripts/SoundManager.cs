@@ -72,7 +72,9 @@ public class SESoundData
     {
         PlayerAttack,
         PlayerDamage,
-        PlayerJump
+        PlayerJump,
+        PushBottom,
+        GameOver
     }
 
     public SE se;

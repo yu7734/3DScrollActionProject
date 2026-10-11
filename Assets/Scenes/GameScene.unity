@@ -13631,7 +13631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1326240044
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17991,7 +17991,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -18094,6 +18094,9 @@ MonoBehaviour:
   - bgm: 2
     audioClip: {fileID: 8300000, guid: ffb687d64330540408f9c45eae5f979f, type: 3}
     volume: 0.5
+  - bgm: 3
+    audioClip: {fileID: 8300000, guid: ffb687d64330540408f9c45eae5f979f, type: 3}
+    volume: 0.5
   seSoundDatas:
   - se: 0
     audioClip: {fileID: 8300000, guid: 2be0fdf018262ed458e15cbd4982dc6f, type: 3}
@@ -18101,8 +18104,11 @@ MonoBehaviour:
   - se: 1
     audioClip: {fileID: 8300000, guid: 360dd0a28d56c5c4db394ad5bf23483b, type: 3}
     volume: 0.7
+  - se: 2
+    audioClip: {fileID: 8300000, guid: 6b60100c3fcd6b148a5cb3e0bef42da3, type: 3}
+    volume: 0.7
   - se: 3
-    audioClip: {fileID: 8300000, guid: 360dd0a28d56c5c4db394ad5bf23483b, type: 3}
+    audioClip: {fileID: 8300000, guid: 085dbdf2ae5d71144820ed857c7e57ee, type: 3}
     volume: 0.7
   masterVolume: 1
   bgmMasterVolume: 1

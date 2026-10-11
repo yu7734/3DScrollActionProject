@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Player\DamageState\DeadState.cs" />
     <Compile Include="Assets\Scripts\SightCheckerManager.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\DamagedState.cs" />
+    <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\ReSpornFallFloor.cs" />
     <Compile Include="Assets\Scripts\Player\IPlayerState.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerJumpState.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\GoalManager.cs" />
+    <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyChaseState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerWeaponAttack.cs" />
     <Compile Include="Assets\Scripts\Player\DamageState\PlayerDamageStateMachine.cs" />
