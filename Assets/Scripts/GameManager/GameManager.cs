@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         gameOverUI.SetActive(false);
         gameClearUI.SetActive(false);
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.Stage, true);
         player.GetComponent<PlayerInputScript>().enabled = false;//操作不可
         slidePanelManager.StartSlide(GameStart);
     }
@@ -35,6 +36,8 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         if (!isGameOver) return;
+        isGameOver = false;
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameOver, false);
         gameOverUI.SetActive(true);
         Time.timeScale = 0;
     }
@@ -42,12 +45,15 @@ public class GameManager : MonoBehaviour
     private void GameClear()
     {
         if (!isGameClear) return;
+        isGameClear = false;
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameClear, false);
         gameClearUI.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void RetryBottom()
     {
+        SoundManager.Instance.PlaySE(SESoundData.SE.PushBottom);
         slidePanelManager.StartSlide(ReLoadGame);//パネルをスライドさせてからロード
     }
 

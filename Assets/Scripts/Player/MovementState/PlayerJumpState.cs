@@ -6,18 +6,19 @@ public class PlayerJumpState : PlayerStateBase
 
     public override void Enter()
     {
-        //ã‚¸ãƒ£ãƒ³ãƒ—ã‚¹ãƒ†ãƒ¼ãƒˆã«å…¥ã£ãŸã‚‰ã‚¸ãƒ£ãƒ³ãƒ—
+        //ƒWƒƒƒ“ƒvƒXƒe[ƒg‚É“ü‚Á‚½‚çƒWƒƒƒ“ƒv
         Jump();
+        SoundManager.Instance.PlaySE(SESoundData.SE.PlayerJump);
     }
 
     public override void Update()
     {
-        //é‡åŠ›
+        //d—Í
         //stateMachine.playerDirection.y += stateMachine.gravity * Time.deltaTime;
-        //ã‚¸ãƒ£ãƒ³ãƒ—ä¸­ã§ã‚‚ç§»å‹•
+        //ƒWƒƒƒ“ƒv’†‚Å‚àˆÚ“®
         stateMachine.PlayerMove();
 
-        //åœ°é¢ã«ç€ã„ãŸã‚‰å¾…æ©Ÿã‚¹ãƒ†ãƒ¼ãƒˆã«é·ç§»
+        //’n–Ê‚É’…‚¢‚½‚ç‘Ò‹@ƒXƒe[ƒg‚É‘JˆÚ
         if (!stateMachine.GetCharacterController.isGrounded) return;
         if (stateMachine._playerInput.inputMove.x != 0)
             stateMachine.SwicthState(typeof(PlayerMoveState));

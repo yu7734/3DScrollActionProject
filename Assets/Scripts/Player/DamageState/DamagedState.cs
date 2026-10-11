@@ -14,6 +14,7 @@ public class DamagedState : PlayerStateBase
     public override void Enter()
     {
         damageStateMachine.gameObject.layer = LayerMask.NameToLayer("PlayerDamage");//ƒŒƒCƒ„[•ÏX
+        SoundManager.Instance.PlaySE(SESoundData.SE.PlayerDamage);
         damageStateMachine.StartCoroutine(Damaged());
     }
 
