@@ -79,6 +79,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Enemy\ShellEnemy\ShellEnemyAttackAnimationEnd.cs" />
     <Compile Include="Assets\Scripts\Player\MovementState\PlayerJumpState.cs" />
+    <Compile Include="Assets\Scripts\BackGroundManager.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\GoalManager.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
