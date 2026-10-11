@@ -7,6 +7,7 @@ public class EnemyBase : MonoBehaviour
     protected Rigidbody rb;
     [SerializeField] protected float rayDistance; //Rayの距離
     [SerializeField] protected float rayHeight;//rayの発射する高さ
+    protected bool isFloor;//床に着いているかいないか
     protected Vector3 moveDirection;//敵の進行方向
     protected Animator animator;
     public delegate void HitRay(); //Rayが当たった時の処理をするデリゲートを宣言
@@ -45,6 +46,26 @@ public class EnemyBase : MonoBehaviour
         if (!Physics.Raycast(rayOrigin, moveDirection, out hit, rayDistance)) return;
         if (!(hit.transform.tag == hitObject)) return;
         hitRay();
+    }
+
+    public void HitFloor()
+    {
+        int layerMask = LayerMask.GetMask("Floor");
+        Vector3 rayPos = transform.position + new Vector3(0, 0.5f, 0);
+        Vector3 raySize = new Vector3(transform.lossyScale.x, 0.1f, 0.1f);
+        RaycastHit hit;
+        if (Physics.BoxCast(rayPos, Vector3.one * 0.5f, Vector3.down, out hit,
+            Quaternion.identity, 0.1f, layerMask))
+        {
+             isFloor = true;
+        }
+        else isFloor = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position + new Vector3(0, 0.4f, 0), Vector3.one);
     }
 
     public Vector3 MoveDirection { get { return moveDirection; } set { moveDirection = value; } }

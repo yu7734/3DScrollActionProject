@@ -6,11 +6,21 @@ public class SlimeEnemy : EnemyBase
     void Update()
     {
         EnemyRay("Floor", ChangeMoveDirection);
+        HitFloor();
     }
 
     private void FixedUpdate()
     {
-        Move();
+        Debug.Log($"isFloor: {isFloor}, direction: {moveDirection}");
+        if (isFloor)
+        {
+            animator.SetBool("isFloor", true);
+            Move();
+        }
+        else
+        {
+            animator.SetBool("isFloor", false);
+        }
     }
 
     private void OnDisable()
