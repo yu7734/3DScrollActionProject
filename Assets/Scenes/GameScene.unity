@@ -19330,7 +19330,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: ffb687d64330540408f9c45eae5f979f, type: 3}
     volume: 0.5
   - bgm: 3
-    audioClip: {fileID: 8300000, guid: ffb687d64330540408f9c45eae5f979f, type: 3}
+    audioClip: {fileID: 8300000, guid: aa76fed0a81a2254f95d9708974983a2, type: 3}
     volume: 0.5
   seSoundDatas:
   - se: 0

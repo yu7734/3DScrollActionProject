@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         gameOverUI.SetActive(false);
         gameClearUI.SetActive(false);
-        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.Stage);
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.Stage, true);
         player.GetComponent<PlayerInputScript>().enabled = false;//ëÄçÏïsâ¬
         slidePanelManager.StartSlide(GameStart);
     }
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameOver) return;
         isGameOver = false;
-        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameOver);
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameOver, false);
         gameOverUI.SetActive(true);
         Time.timeScale = 0;
     }
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameClear) return;
         isGameClear = false;
-        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameClear);
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameClear, false);
         gameClearUI.SetActive(true);
         Time.timeScale = 0;
     }

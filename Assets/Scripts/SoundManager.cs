@@ -29,12 +29,14 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayBGM(BGMSoundData.BGM bgm)
+    public void PlayBGM(BGMSoundData.BGM bgm, bool roop)
     {
         BGMSoundData data = bgmSoundDatas.Find(data => data.bgm == bgm);
         BGMSource.clip = data.audioClip;
         BGMSource.volume = data.volume * masterVolume * bgmMasterVolume;
         BGMSource.Play();
+        if (roop) BGMSource.loop = true;
+        else BGMSource.loop = false;
     }
 
     public void PlaySE(SESoundData.SE se)

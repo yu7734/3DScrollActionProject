@@ -6,6 +6,11 @@ public class TitleManager : MonoBehaviour
     [SerializeField]
     private SlidePanelManager slidePanelManager;
 
+    private void Start()
+    {
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.Title, true);
+    }
+
     public void GameStart()
     {
         SoundManager.Instance.PlaySE(SESoundData.SE.PushBottom);
