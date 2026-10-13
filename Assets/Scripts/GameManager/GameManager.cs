@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameClearUI;
     [SerializeField] private SlidePanelManager slidePanelManager;
     [SerializeField] private GameObject player;
-    private bool isGameOver;
-    private bool isGameClear;
-    private bool isGameStart;
+    private bool isGameOver;//ゲームオーバーか
+    private bool isGameClear;//ゲームクリアか
+    private bool isGameStart;//スライド中にはゲームを動かさないbool値
 
     private void Awake()
     {
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         if (!isGameOver) return;
-        isGameOver = false;
+        isGameOver = false;//処理を毎フレーム処理させない為にfalseにする
         SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameOver, false);
         gameOverUI.SetActive(true);
         Time.timeScale = 0;
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     private void GameClear()
     {
         if (!isGameClear) return;
-        isGameClear = false;
+        isGameClear = false;//処理を毎フレーム処理させない為にfalseにする
         SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameClear, false);
         gameClearUI.SetActive(true);
         Time.timeScale = 0;
@@ -60,6 +60,17 @@ public class GameManager : MonoBehaviour
     private void ReLoadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void TitleBottom()
+    {
+        SoundManager.Instance.PlaySE(SESoundData.SE.PushBottom);
+        slidePanelManager.StartSlide(LoadTitle);
+    }
+
+    private void LoadTitle()
+    {
+        SceneManager.LoadScene("TitleScene");
     }
 
     private void GameStart()
