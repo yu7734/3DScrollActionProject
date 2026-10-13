@@ -5,16 +5,25 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject gameClearUI;
-    private bool isGameOver;
-    private bool isGameClear;
+    [SerializeField] private SlidePanelManager slidePanelManager;
+    [SerializeField] private GameObject player;
+    private bool isGameOver;//ゲームオーバーか
+    private bool isGameClear;//ゲームクリアか
+    private bool isGameStart;//スライド中にはゲームを動かさないbool値
+
+    private void Awake()
+    {
+        player.GetComponent<PlayerInputScript>().enabled = false;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Time.timeScale = 1;
         gameOverUI.SetActive(false);
         gameClearUI.SetActive(false);
-        PlayerStartManager playerStart = new PlayerStartManager();
-        playerStart.GetSetIsStart = true;
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.Stage, true);
+        player.GetComponent<PlayerInputScript>().enabled = false;//操作不可
+        slidePanelManager.StartSlide(GameStart);
     }
 
     // Update is called once per frame
@@ -27,6 +36,8 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         if (!isGameOver) return;
+        isGameOver = false;//処理を毎フレーム処理させない為にfalseにする
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameOver, false);
         gameOverUI.SetActive(true);
         Time.timeScale = 0;
     }
@@ -34,15 +45,42 @@ public class GameManager : MonoBehaviour
     private void GameClear()
     {
         if (!isGameClear) return;
+        isGameClear = false;//処理を毎フレーム処理させない為にfalseにする
+        SoundManager.Instance.PlayBGM(BGMSoundData.BGM.GameClear, false);
         gameClearUI.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void RetryBottom()
     {
+        SoundManager.Instance.PlaySE(SESoundData.SE.PushBottom);
+        slidePanelManager.StartSlide(ReLoadGame);//パネルをスライドさせてからロード
+    }
+
+    private void ReLoadGame()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void TitleBottom()
+    {
+        SoundManager.Instance.PlaySE(SESoundData.SE.PushBottom);
+        slidePanelManager.StartSlide(LoadTitle);
+    }
+
+    private void LoadTitle()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
+
+    private void GameStart()
+    {
+        //プレイヤーが操作可能に
+        player.GetComponent<PlayerInputScript>().enabled = true;
+        isGameStart = true;
     }
 
     public bool GetSetIsGameOver { get { return isGameOver; } set { isGameOver = value; } }
     public bool GetSetIsGameClear { get { return isGameClear; } set { isGameClear = value; } }
+    public bool GetSetIsGameStart { get { return isGameStart; } set { isGameStart = value; } }
 }

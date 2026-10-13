@@ -4,12 +4,14 @@ public class WeaponColliderActive : MonoBehaviour
 {
     public Collider weaponCollider;
 
-    void OnWeapon()
+    private void OnWeapon()
     {
         weaponCollider.enabled = true;
+        //コライダーがONになったタイミングでSEを鳴らす
+        SoundManager.Instance.PlaySE(SESoundData.SE.PlayerAttack);
     }
 
-    void OffWeapon()
+    private void OffWeapon()
     {
         weaponCollider.enabled = false;
     }

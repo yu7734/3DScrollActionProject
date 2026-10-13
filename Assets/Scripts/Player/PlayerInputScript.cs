@@ -26,6 +26,7 @@ public class PlayerInputScript: MonoBehaviour
         inputActions.Player.Move.canceled += OnMove;
 
         //攻撃イベントの登録
+        inputActions.Player.Attack.started += OnAttack;
         inputActions.Player.Attack.performed += OnAttack;
         inputActions.Player.Attack.canceled += OnAttack;
 
@@ -70,17 +71,21 @@ public class PlayerInputScript: MonoBehaviour
     //攻撃イベント
     private void OnAttack(InputAction.CallbackContext context)
     {
-
-        if (context.performed)
+        if (context.started)
         {
             //攻撃ステートに入る
             if (_playerMovementStateMachine.GetCharacterController.isGrounded)
                 _playerMovementStateMachine.SwicthState(typeof(PlayerAttackState));
         }
 
+        if (context.performed)
+        {
+            
+        }
+
         if (context.canceled)
         {
-            _playerMovementStateMachine.SwicthState(typeof(PlayerIdleState));
+            //_playerMovementStateMachine.SwicthState(typeof(PlayerIdleState));
         }
     }
 

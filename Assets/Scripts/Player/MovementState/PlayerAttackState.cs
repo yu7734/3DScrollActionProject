@@ -9,16 +9,19 @@ public class PlayerAttackState : PlayerStateBase
 
     public override void Enter()
     {
+        //軌跡エフェクトの描画をONにして、攻撃アニメーション再生
+        stateMachine.GetSetTrailRenderer.emitting = true;
+        stateMachine.CAnima("Attack", true);
     }
 
     public override void Update()
     {
-        //攻撃アニメーション再生
-        stateMachine.CAnima("Attack", true);
+
     }
 
     public override void Exit()
     {
+        stateMachine.GetSetTrailRenderer.emitting = false;
         stateMachine.CAnima("Attack", false);
     }
 }

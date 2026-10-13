@@ -7,8 +7,14 @@ public class TimeManager : MonoBehaviour
     [SerializeField, Header("制限時間")] private float maxTime;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private ScoreManager scoreManager;
+    private GameManager gameManager;
     private float time;
-    
+
+    private void Awake()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +31,7 @@ public class TimeManager : MonoBehaviour
     private void LimitedTime()
     {
         //制限時間が0になったらプレイヤー死亡（ゲームオーバー）
+        if (!gameManager.GetSetIsGameStart) return;
         time -= Mathf.Max(0, Time.deltaTime);
         if (time >= 0) return;
         playerDamage.PlayerHP = 0;
