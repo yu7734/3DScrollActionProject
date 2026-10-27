@@ -19,7 +19,7 @@ public class PlayerJumpState : PlayerStateBase
         stateMachine.PlayerMove();
 
         //地面に着いたら待機ステートに遷移
-        if (!stateMachine.GetCharacterController.isGrounded) return;
+        if (!stateMachine.GetRaycastCheckGround.GetIsGround) return;
         if (stateMachine._playerInput.inputMove.x != 0)
             stateMachine.SwicthState(typeof(PlayerMoveState));
         else
@@ -35,6 +35,5 @@ public class PlayerJumpState : PlayerStateBase
     {
         stateMachine.playerDirection.y = Mathf.Sqrt(stateMachine.playerJumpPower * -1 * stateMachine.gravity);
         stateMachine.GetSetFallGround = null;
-        //stateMachine.characterController.Move(stateMachine.playerDirection);
     }
 }

@@ -14,6 +14,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     private Animator animator;
     public Vector3 playerDirection;
     private CharacterController characterController;
+    private RaycastCheckGround raycastCheckGround;
     //プレイヤーモデルを取得
     public GameObject _playerObject;
     public PlayerInputScript _playerInput;
@@ -28,7 +29,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     private void Awake()
     {
-        //_playerObject = GetComponentInChildren<GameObject>();
+        raycastCheckGround = GetComponent<RaycastCheckGround>();
         //ステートのインスタンス化
         states = new Dictionary<System.Type, ICharactorState>()
         {
@@ -117,6 +118,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     }
 
     public CharacterController GetCharacterController {  get { return characterController; } }
+    public RaycastCheckGround GetRaycastCheckGround {  get { return raycastCheckGround; } }
     public FallGround GetSetFallGround {  get { return fallGround; }  set { fallGround = value; } }
     public TrailRenderer GetSetTrailRenderer { get { return trailRenderer; } set { trailRenderer = value; } }
 }

@@ -17,7 +17,7 @@ public class PlayerIdleState : PlayerStateBase
     public override void Update()
     {
         stateMachine.PlayerMove();
-        if (stateMachine.GetCharacterController.isGrounded) return;
+        if (stateMachine.GetRaycastCheckGround.GetIsGround) return;
 
         //地面に着いていなかったら落下ステートに遷移
         stateMachine.SwicthState(typeof(PlayerFallState));

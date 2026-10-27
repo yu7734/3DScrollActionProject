@@ -4,13 +4,16 @@ using UnityEngine.InputSystem;
 public class PlayerInputScript: MonoBehaviour
 {
     private InputSystem_Actions inputActions;
-    //ステートマシンスクリプト
+    //移動ステートマシンスクリプト
     private PlayerMovementStateMachine _playerMovementStateMachine;
+    
+    private RaycastCheckGround raycastCheckGround;
     private Vector2 _inputMove = Vector2.zero;
 
     private void Awake()
     {
         _playerMovementStateMachine = GetComponent<PlayerMovementStateMachine>();
+        raycastCheckGround = GetComponent<RaycastCheckGround>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -74,7 +77,7 @@ public class PlayerInputScript: MonoBehaviour
         if (context.started)
         {
             //攻撃ステートに入る
-            if (_playerMovementStateMachine.GetCharacterController.isGrounded)
+            if (raycastCheckGround.GetIsGround)
                 _playerMovementStateMachine.SwicthState(typeof(PlayerAttackState));
         }
 
@@ -94,7 +97,7 @@ public class PlayerInputScript: MonoBehaviour
     {
         if (context.started)
         {
-            if (_playerMovementStateMachine.GetCharacterController.isGrounded)
+            if (raycastCheckGround.GetIsGround)
                 _playerMovementStateMachine.SwicthState(typeof(PlayerJumpState));
         }
 

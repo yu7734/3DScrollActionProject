@@ -21788,6 +21788,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c54540067838ce44a4fa8619673c001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
+--- !u!114 &1973245387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677970963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd953fed6b9d0942a0abbe7f5ece77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RaycastCheckGround
+  _rayLength: 0.3
+  _rayOffset: 0
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1973978362
 GameObject:
   m_ObjectHideFlags: 0
@@ -23537,6 +23554,10 @@ PrefabInstance:
       propertyPath: soundManager
       value: 
       objectReference: {fileID: 1800246708}
+    - target: {fileID: 8813344778996212201, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
+      propertyPath: raycastCheckGround
+      value: 
+      objectReference: {fileID: 1973245387}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -23544,6 +23565,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2048074102}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3112179839733486037, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 1973245387}
     - targetCorrespondingSourceObject: {fileID: 3338293143786988618, guid: 5869bc0f0e57718449252be9f76a07a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 515670955}
