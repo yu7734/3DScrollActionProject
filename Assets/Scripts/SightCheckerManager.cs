@@ -33,14 +33,4 @@ public class SightCheckerManager : MonoBehaviour
 
         return innerProduct > cosHalf && targetDistance < _maxDistance;//Ž‹ŠE”»’è
     }
-
-    // Ž‹ŠE”»’è‚ÌŒ‹‰Ê‚ðGUIo—Í
-    private void OnGUI()
-    {
-        // Ž‹ŠE”»’è
-        var isVisible = IsRock();
-
-        // Œ‹‰Ê•\Ž¦
-        GUI.Box(new Rect(20, 20, 150, 23), $"isVisible = {isVisible}");
-    }
 }
