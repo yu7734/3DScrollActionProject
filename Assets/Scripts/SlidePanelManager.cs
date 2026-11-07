@@ -16,6 +16,7 @@ public class SlidePanelManager : MonoBehaviour
     [SerializeField, Tooltip("最初のスライドのモード")] 
     private SlideMode slideMode;
 
+    private float slideImageWidth;
     private Tween slideTween;
 
     private RectTransform rectTransform;
@@ -27,11 +28,12 @@ public class SlidePanelManager : MonoBehaviour
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        slideImageWidth = rectTransform.rect.width;
     }
 
     private async UniTask CloseSlide()
     {
-        this.rectTransform.anchoredPosition = new Vector3(800, 0, 0);
+        this.rectTransform.anchoredPosition = new Vector3(slideImageWidth, 0, 0);
         //リトライボタン押した時にスライドアニメーションを動かすためにSetUpdateを付け足し
         slideTween = rectTransform.DOAnchorPosX(0, slideTime).SetUpdate(true);
         await slideTween.AsyncWaitForCompletion();
@@ -39,7 +41,7 @@ public class SlidePanelManager : MonoBehaviour
     }
     private async UniTask OpenSlide()
     {
-        slideTween = rectTransform.DOAnchorPosX(-800, slideTime);
+        slideTween = rectTransform.DOAnchorPosX(-slideImageWidth, slideTime);
         await slideTween .AsyncWaitForCompletion();
         CompleteSlide();
     }
